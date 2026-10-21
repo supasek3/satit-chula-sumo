@@ -1,0 +1,90 @@
+seed 1 done
+seed 2 done
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+Could not connect to TraCI server at localhost:49547 [Errno 61] Connection refused
+seed 3 done
+seed 4 done
+seed 5 done
+seed 6 done
+seed 7 done
+seed 8 done
+seed 9 done
+seed 10 done
+
+KPI over 10 seeds: mean  sd  min  max   (95% CI half-width)
+teleports                            0.4     0.8      0.0      2.0   ±0.6
+veh_unfinished                       0.0     0.0      0.0      0.0   ±0.0
+max_queue_outside_entry_veh        250.3    20.0    220.0    281.0   ±14.3
+last_vehicle_done_min_after_0810      32.3     4.2     26.8     39.9   ±3.0
+collisions                           0.0     0.0      0.0      0.0   ±0.0
+veh_delay_all_s                    676.9    84.0    581.0    838.5   ±60.1
+delay_MAIN_s                       717.5    89.2    617.0    889.4   ±63.8
+delay_P1_IN_s                      348.6   124.0    197.7    585.6   ±88.7
+delay_P2_IN_s                      449.5   181.6    139.1    679.6   ±129.9
+delay_P1_OUT_s                     165.2    41.0     99.9    234.5   ±29.4
+delay_P2_OUT_s                     181.3    56.9    115.3    293.2   ±40.7
+delay_SRC_SIDE_L_s                  27.1     4.6     18.1     31.6   ±3.3
+delay_SRC_SIDE_R_s                  26.8     3.8     20.8     33.8   ±2.7
+delay_SIDE_p95_s                    61.2     8.5     47.6     74.2   ±6.1
+ped_wait_X1_mean_s                  19.5     0.7     18.0     20.4   ±0.5
+ped_wait_X1_p95_s                   50.8     2.7     46.0     56.0   ±2.0
+ped_wait_X2_mean_s                   2.6     0.4      1.8      2.9   ±0.3
+ped_wait_X2_p95_s                   12.3     2.2      8.0     15.0   ±1.6
+veh_arrived                       1230.5     1.3   1228.0   1232.0   ±0.9
+veh_arrived_by_0810                944.8    28.0    903.0    977.0   ±20.0
+persons_arrived                   1111.0     0.0   1111.0   1111.0   ±0.0
+queue_side_road_m                   29.0    20.5     20.1     86.6   ±14.7
+queue_main_before_X1_m              39.4     0.1     39.1     39.5   ±0.1
+queue_main_P2_to_P1_m               36.8     0.0     36.7     36.8   ±0.0
+queue_main_mid_m                    47.1     0.0     47.0     47.1   ±0.0
+queue_main_entry_m                 146.3     0.0    146.3    146.3   ±0.0
+queue_soi11_before_X2_m             27.2     2.7     20.1     31.2   ±2.0
+dropoffs_bs_1                       88.7    10.7     69.0    106.0   ±7.7
+dropoffs_bs_5                      197.1    12.1    181.0    216.0   ±8.6
+dropoffs_bs_0                      245.3    14.0    229.0    272.0   ±10.0
+dropoffs_bs_2                       89.6     6.3     78.0     99.0   ±4.5
+dropoffs_bs_4                       15.4     6.3      6.0     27.0   ±4.5
+conflicts_rear_end_TTC<1.5s       2259.8    88.1   2163.0   2427.0   ±63.0
+conflicts_merge_TTC<1.5s             0.0     0.0      0.0      0.0   ±0.0
+conflicts_crossing_TTC<1.5s          0.0     0.0      0.0      0.0   ±0.0
+conflicts_junction_TTC<1.5s          0.0     0.0      0.0      0.0   ±0.0

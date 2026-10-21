@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <!-- Drop-off zones sized by car count: 7.5 m per car (car 5.0 m + minGap 2.5 m) -->
+    <busStop id="bs_0" name="Z_MAIN_DS (SUMO-only, west of X1)" lane="31993796#4_1"    startPos="4.33"   endPos="26.83"/>   <!-- 3 cars, west of gate -->
+    <busStop id="bs_1" name="Z2Z3_L (curbSpots_L)" lane="31993796#3_1"    startPos="4.87"   endPos="34.87"/>  <!-- 4 cars, east of gate, left lane -->
+    <busStop id="bs_5" name="Z2Z3_R (curbSpots_R)" lane="31993796#3_2"    startPos="4.87"   endPos="34.87"/>  <!-- 4 cars, east of gate, right lane -->
+    <busStop id="bs_2" name="Z1 (curbSpots2_L, DROPOFF_SECOND)" lane="31973416#1_1"    startPos="0.15"   endPos="28.15"/>   <!-- 4 cars, Soi 11 before X2 -->
+    <busStop id="bs_4" name="Z1_DS (SUMO-only, south of X2)" lane="31973416#1.32_1" startPos="4.66"   endPos="34.66"/>   <!-- 4 cars, Soi 11 after X2 -->
+</additional>

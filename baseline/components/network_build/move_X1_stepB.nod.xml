@@ -1,0 +1,7 @@
+<nodes>
+    <node id="10784747877" type="traffic_light"/>
+    <node id="pad_gate_N" x="244.18" y="224.39" type="dead_end"/>
+    <node id="P1_lot" x="287.54" y="217.95" type="dead_end"/>
+    <node id="P2_node" x="375.00" y="181.46"/>
+    <node id="P2_lot" x="381.39" y="206.04" type="dead_end"/>
+</nodes>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Main road LEFT lane may queue across the driveway mouths; the right lane keeps them clear.
+     Parking exits turn into the nearest (right) lane only, so they only give way to the right lane. -->
+<connections>
+    <connection from="31993796#3_E" to="31993796#3_M" fromLane="1" toLane="1" keepClear="false"/>
+    <connection from="31993796#3_M" to="31993796#3"   fromLane="1" toLane="1" keepClear="false"/>
+    <delete from="P1_OUT" to="31993796#3"   fromLane="0" toLane="1"/>
+    <delete from="P2_OUT" to="31993796#3_M" fromLane="0" toLane="1"/>
+</connections>

@@ -1,0 +1,9 @@
+<edges>
+    <edge id="31993796#3_E" shape="608.73,137.22 375.00,181.46"/>
+    <edge id="31993796#3_M" shape="375.00,181.46 360.09,184.28 326.49,190.49"/>
+    <edge id="P1_IN"  from="10072794956" to="P1_lot" numLanes="1" disallow="pedestrian" speed="5.56" priority="1" spreadType="center" shape="281.10,198.52 289.01,217.33"/>
+    <edge id="P1_OUT" from="P1_lot" to="10072794956" numLanes="1" disallow="pedestrian" speed="5.56" priority="1" spreadType="center" shape="286.07,218.57 278.16,199.76"/>
+    <edge id="P2_IN"  spreadType="center" shape="376.55,181.06 382.94,205.64"/>
+    <edge id="P2_OUT" spreadType="center" shape="379.84,206.44 373.45,181.86"/>
+    <edge id="walk_gate_N" from="pad_gate_N" to="10784747877" numLanes="1" allow="pedestrian" width="4.0" speed="1.39"/>
+</edges>

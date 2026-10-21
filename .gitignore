@@ -1,0 +1,5 @@
+.DS_Store
+__pycache__/
+*.zip
+baseline_v6/output/*
+!baseline_v6/output/.gitkeep

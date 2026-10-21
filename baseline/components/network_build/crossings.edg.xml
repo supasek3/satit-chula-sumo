@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edges>
+    <edge id="walk_gate_N" from="pad_gate_N" to="10072794956" numLanes="1" allow="pedestrian" width="4.0" speed="1.39"/>
+    <edge id="walk_J1_W"   from="pad_J1_W"   to="J1"          numLanes="1" allow="pedestrian" width="4.0" speed="1.39"/>
+</edges>

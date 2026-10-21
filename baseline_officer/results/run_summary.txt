@@ -1,0 +1,52 @@
+seed 1 done
+seed 2 done
+seed 3 done
+seed 4 done
+seed 5 done
+seed 6 done
+seed 7 done
+seed 8 done
+seed 9 done
+seed 10 done
+
+KPI over 10 seeds: mean  sd  min  max   (95% CI half-width)
+officer_dropoff_stops               40.1     4.6     32.0     47.0   ±3.3
+officer_ped_priority_stops          22.0     6.3     11.0     31.0   ±4.5
+officer_max_wait_stops              23.3     1.4     21.0     26.0   ±1.0
+officer_gave_up                      0.0     0.0      0.0      0.0   ±0.0
+teleports                            0.6     0.8      0.0      2.0   ±0.6
+veh_unfinished                       0.0     0.0      0.0      0.0   ±0.0
+max_queue_outside_entry_veh        233.4    17.5    209.0    262.0   ±12.5
+last_vehicle_done_min_after_0810      31.9     3.1     27.1     38.5   ±2.2
+collisions                           0.0     0.0      0.0      0.0   ±0.0
+veh_delay_all_s                    653.4    53.0    579.3    756.2   ±37.9
+delay_MAIN_s                       692.3    56.7    613.6    801.0   ±40.6
+delay_P1_IN_s                      339.9    99.8    202.8    463.2   ±71.4
+delay_P2_IN_s                      431.4   193.3    146.0    780.2   ±138.3
+delay_P1_OUT_s                     158.2    34.6     94.4    202.4   ±24.8
+delay_P2_OUT_s                     214.7    61.9    119.9    310.6   ±44.3
+delay_SRC_SIDE_L_s                  30.3     3.7     25.4     36.1   ±2.7
+delay_SRC_SIDE_R_s                  28.8     2.1     25.6     31.5   ±1.5
+delay_SIDE_p95_s                    67.2     7.3     56.5     76.7   ±5.2
+ped_wait_X1_mean_s                  42.5     1.4     39.7     44.4   ±1.0
+ped_wait_X1_p95_s                  109.9     1.4    108.0    112.0   ±1.0
+ped_wait_X2_mean_s                   2.7     0.6      2.0      4.0   ±0.4
+ped_wait_X2_p95_s                   12.5     3.6     10.0     21.0   ±2.6
+veh_arrived                       1230.5     1.3   1228.0   1232.0   ±0.9
+veh_arrived_by_0810                963.1    20.1    932.0    995.0   ±14.3
+persons_arrived                   1111.0     0.0   1111.0   1111.0   ±0.0
+queue_side_road_m                   22.4     5.1     20.1     35.1   ±3.6
+queue_main_before_X1_m              39.4     0.1     39.1     39.5   ±0.1
+queue_main_P2_to_P1_m               36.8     0.0     36.7     36.8   ±0.0
+queue_main_mid_m                    47.0     0.1     46.9     47.1   ±0.1
+queue_main_entry_m                 146.3     0.0    146.3    146.3   ±0.0
+queue_soi11_before_X2_m             26.9     2.4     20.1     28.6   ±1.7
+dropoffs_bs_1                       73.5     4.6     67.0     80.0   ±3.3
+dropoffs_bs_5                      199.1    13.3    182.0    225.0   ±9.5
+dropoffs_bs_0                      258.5    10.4    241.0    271.0   ±7.4
+dropoffs_bs_2                       88.1     7.0     74.0     98.0   ±5.0
+dropoffs_bs_4                       16.9     7.0      7.0     31.0   ±5.0
+conflicts_rear_end_TTC<1.5s       2290.6    52.9   2203.0   2373.0   ±37.8
+conflicts_merge_TTC<1.5s             0.0     0.0      0.0      0.0   ±0.0
+conflicts_crossing_TTC<1.5s          0.0     0.0      0.0      0.0   ±0.0
+conflicts_junction_TTC<1.5s          0.0     0.0      0.0      0.0   ±0.0
