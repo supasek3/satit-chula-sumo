@@ -27,7 +27,22 @@ def ci(v):
 
 
 base = load(BASE)
-files = sys.argv[1:] or [os.path.join(HERE, f) for f in DEFAULT]
+SUMMARY = "--summary" in sys.argv
+files = [a for a in sys.argv[1:] if a != "--summary"] or [os.path.join(HERE, f) for f in DEFAULT]
+if SUMMARY:
+    cols = [("veh_delay_all_s", "delay s"), ("ped_wait_X1_p95_s", "X1 p95 s"), ("ped_wait_X1_mean_s", "X1 mean s"),
+            ("ped_wait_X2_mean_s", "X2 mean s"), ("ped_wait_X2_p95_s", "X2 p95 s"), ("last_vehicle_done_min_after_0810", "last car min"),
+            ("collisions", "coll"), ("teleports", "tele")]
+    print(f"\n{'run (10 seeds, mean)':44s}" + "".join(f"{n:>13s}" for _, n in cols))
+    rows = [("baseline_v7", base)] + [(os.path.relpath(f, HERE).replace("/kpi_seeds.csv", ""), load(f)) for f in files if os.path.exists(f)]
+    for name, d in rows:
+        cells = []
+        for k, _ in cols:
+            v = [float(r[k]) for r in d.values()]
+            m = st.mean(v); b0 = st.mean(float(r[k]) for r in base.values())
+            cells.append(f"{m:7.1f}" + (f" {100 * (m - b0) / b0:+4.0f}%" if b0 and name != "baseline_v7" and k not in ("collisions", "teleports") else (f" (Σ{sum(v):.0f})" if k in ("collisions", "teleports") else "      ")))
+        print(f"{name[:44]:44s}" + "".join(f"{c:>13s}" for c in cells))
+    sys.exit(0)
 for f in files:
     if not os.path.exists(f):
         print(f"\n(missing: {f})")

@@ -13,3 +13,6 @@ scenario_z1_dropoff_v7/output/*
 !scenario_z1_dropoff_v7/output/.gitkeep
 scenario_fluke_v7/output/*
 !scenario_fluke_v7/output/.gitkeep
+scenario_combined_v7/output/*
+!scenario_combined_v7/output/.gitkeep
+scenario_combined_v7/results_*.log
