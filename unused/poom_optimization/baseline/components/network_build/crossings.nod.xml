@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<nodes>
-    <!-- far-side waiting pads (orange boxes) -->
-    <node id="pad_gate_N" x="282.45" y="218.94" type="dead_end"/>  <!-- north side of gate crossing -->
-    <node id="pad_J1_W"   x="137.00" y="128.80" type="dead_end"/>  <!-- west side of Soi Chula 11 crossing -->
-</nodes>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Turn-ins to the north driveways from the right (north) lane -->
-<connections>
-    <connection from="31993796#3_M" to="P1_IN" fromLane="2" toLane="0"/>
-    <connection from="31993796#3_E" to="P2_IN" fromLane="2" toLane="0"/>
-</connections>

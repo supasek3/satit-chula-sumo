@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Parking lot ends of the north driveways (replace old stubs E0-E3) -->
-<nodes>
-    <node id="P1_lot" x="334.40" y="209.30" type="dead_end"/>  <!-- P1 north-mid parking -->
-    <node id="P2_lot" x="442.90" y="194.40" type="dead_end"/>  <!-- P2 north-east parking -->
-</nodes>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Signalized zebra crossings for Satit Chula (applied with netconvert, see make_crossings.sh) -->
-<connections>
-    <!-- Main gate, east-west road (orange box at top of the plan) -->
-    <crossing node="10072794956" edges="31993796#4" width="4.0"/>
-    <!-- Soi Chulalongkorn 11, north-south road (orange box bottom-left) -->
-    <crossing node="J1" edges="31973416#1.32" width="4.0"/>
-</connections>
