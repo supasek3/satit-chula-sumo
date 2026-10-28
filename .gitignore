@@ -3,3 +3,7 @@ __pycache__/
 *.zip
 baseline_v6/output/*
 !baseline_v6/output/.gitkeep
+baseline_v7/output/*
+!baseline_v7/output/.gitkeep
+# raw per-seed SUMO outputs (hundreds of MB; run_seeds.py regenerates them)
+**/results*/seed_*/
