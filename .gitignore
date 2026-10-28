@@ -7,3 +7,9 @@ baseline_v7/output/*
 !baseline_v7/output/.gitkeep
 # raw per-seed SUMO outputs (hundreds of MB; run_seeds.py regenerates them)
 **/results*/seed_*/
+scenario_opt_v7/output/*
+!scenario_opt_v7/output/.gitkeep
+scenario_z1_dropoff_v7/output/*
+!scenario_z1_dropoff_v7/output/.gitkeep
+scenario_fluke_v7/output/*
+!scenario_fluke_v7/output/.gitkeep
