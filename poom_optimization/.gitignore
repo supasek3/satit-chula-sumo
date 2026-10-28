@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.zip
+baseline_v6/output/*
+!baseline_v6/output/.gitkeep
+# raw per-seed SUMO outputs (hundreds of MB; run_seeds.py regenerates them)
+**/results*/seed_*/
+scenario_opt/screen/*/seed_*/
+scenario_opt/output/*
+!scenario_opt/output/.gitkeep

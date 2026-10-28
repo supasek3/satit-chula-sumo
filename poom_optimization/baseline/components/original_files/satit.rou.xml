@@ -1,0 +1,10 @@
+<routes>
+    <!-- Vehicle Types -->
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="5.0" minGap="2.5" maxSpeed="13.89"/>
+    <vType id="bus" accel="1.2" decel="4.0" sigma="0.5" length="12.0" minGap="3.0" maxSpeed="10.00" vClass="bus"/>
+    <vType id="pedestrian" vClass="pedestrian"/>
+
+    <!-- Traffic Flows using Valid Edges -->
+    <flow id="f_car" type="car" begin="0" end="3600" number="80" from="31973416#0" to="31973416#1"/>
+    <flow id="f_bus" type="bus" begin="0" end="3600" number="10" from="31973416#0" to="31973416#1"/>
+</routes>

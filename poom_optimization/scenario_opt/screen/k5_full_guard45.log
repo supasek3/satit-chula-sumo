@@ -1,0 +1,115 @@
+settings: {'OPT_BS0_ACCEPT': 0.85, 'OPT_BS0_SPOTS': 4, 'OPT_BS0_FLEX': 1, 'OPT_NO_BS5': 1, 'OPT_KEEP_RIGHT': 1, 'OPT_P_BACK': 1.0, 'OPT_GUARD': 'smart', 'OPT_PED_MAXWAIT': 45.0, 'OPT_PED_MIN_BATCH': 12}
+Warning: Could not set locale to 'C'.
+Warning: Could not set locale to 'C'.Warning: Could not set locale to 'C'.Warning: Could not set locale to 'C'.
+Warning: Could not set locale to 'C'.
+
+Warning: Could not set locale to 'C'.
+
+Warning: Environment variable SUMO_HOME is not set properly, disabling XML validation. Set 'auto' or 'always' for web lookups.
+Warning: Environment variable SUMO_HOME is not set properly, disabling XML validation. Set 'auto' or 'always' for web lookups.
+Warning: Environment variable SUMO_HOME is not set properly, disabling XML validation. Set 'auto' or 'always' for web lookups.
+Warning: Environment variable SUMO_HOME is not set properly, disabling XML validation. Set 'auto' or 'always' for web lookups.
+Warning: Environment variable SUMO_HOME is not set properly, disabling XML validation. Set 'auto' or 'always' for web lookups.
+Warning: Environment variable SUMO_HOME is not set properly, disabling XML validation. Set 'auto' or 'always' for web lookups.
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+pj_obj_create: Cannot find proj.db
+ Retrying in 1 seconds
+seed 6 done
+ Retrying in 1 seconds
+seed 1 done
+ Retrying in 1 seconds
+seed 4 done
+ Retrying in 1 seconds
+seed 2 done
+ Retrying in 1 seconds
+seed 5 done
+ Retrying in 1 seconds
+seed 3 done
+
+KPI over 6 seeds: mean  sd  min  max   (95% CI half-width)
+teleports                            0.0     0.0      0.0      0.0   ±0.0
+veh_unfinished                       0.0     0.0      0.0      0.0   ±0.0
+max_queue_outside_entry_veh        105.7    17.8     88.0    139.0   ±14.2
+last_vehicle_done_min_after_0810      17.5     3.4     13.6     23.3   ±2.7
+collisions                           0.0     0.0      0.0      0.0   ±0.0
+veh_delay_all_s                    248.6    44.7    221.0    334.9   ±35.8
+delay_MAIN_s                       264.7    47.9    236.0    357.0   ±38.3
+delay_P1_IN_s                       11.6     1.2     10.4     13.2   ±0.9
+delay_P2_IN_s                        7.8     2.3      5.5     10.7   ±1.9
+delay_P1_OUT_s                      41.9     4.1     35.3     46.4   ±3.3
+delay_P2_OUT_s                      44.8    19.6     23.7     78.2   ±15.7
+delay_SRC_SIDE_L_s                  29.2     6.6     23.2     40.1   ±5.3
+delay_SRC_SIDE_R_s                  30.5     3.2     26.3     35.8   ±2.5
+delay_SIDE_p95_s                    67.8    12.5     54.8     85.5   ±10.0
+veh_with_student                   492.0    15.5    476.0    515.0   ±12.4
+veh_no_student                     738.7    15.1    716.0    752.0   ±12.1
+delay_with_student_s               443.1    73.8    397.8    590.0   ±59.1
+delay_no_student_s                 118.3    19.5    102.8    151.5   ±15.6
+ped_wait_X1_mean_s                  13.8     0.8     13.1     15.2   ±0.6
+ped_wait_X1_p95_s                   42.8     1.7     41.0     45.0   ±1.4
+ped_wait_X2_mean_s                   2.6     0.4      2.0      3.1   ±0.4
+ped_wait_X2_p95_s                   11.5     2.3      8.0     14.0   ±1.9
+veh_arrived                       1230.7     1.4   1228.0   1232.0   ±1.1
+veh_arrived_by_0810               1108.8    20.6   1072.0   1124.0   ±16.5
+persons_arrived                   1111.0     0.0   1111.0   1111.0   ±0.0
+queue_side_road_m                   20.1     6.7     12.6     27.7   ±5.4
+queue_main_before_X1_m              39.4     0.1     39.1     39.5   ±0.1
+queue_main_P2_to_P1_m               36.7     0.1     36.5     36.7   ±0.1
+queue_main_mid_m                    46.9     0.2     46.5     47.1   ±0.2
+queue_main_entry_m                 146.3     0.0    146.2    146.3   ±0.0
+queue_soi11_before_X2_m             26.9     3.6     20.1     31.0   ±2.9
+dropoffs_bs_1                      206.7    11.5    190.0    224.0   ±9.2
+dropoffs_bs_1x                      75.3     4.1     69.0     80.0   ±3.3
+dropoffs_bs_5                        0.0     0.0      0.0      0.0   ±0.0
+dropoffs_bs_0                      110.5    14.8     97.0    129.0   ±11.8
+dropoffs_bs_2                      102.5     0.8    101.0    103.0   ±0.7
+dropoffs_bs_4                        2.5     0.8      2.0      4.0   ±0.7
+dropoffs_gap                       136.8    12.3    121.0    154.0   ±9.8
+dropoffs_gate_left_total           418.8    12.1    405.0    441.0   ±9.7
+dropoffs_other                       0.0     0.0      0.0      0.0   ±0.0
+switch_bs_1->bs_5                    0.0     0.0      0.0      0.0   ±0.0
+switch_bs_1->bs_0                  294.2    11.8    282.0    311.0   ±9.4
+switch_bs_5->bs_1                    0.0     0.0      0.0      0.0   ±0.0
+switch_bs_5->bs_0                    0.0     0.0      0.0      0.0   ±0.0
+switch_bs_2->bs_4                    2.5     0.8      2.0      4.0   ±0.7
+zone_gate_cars                     502.3    18.8    476.0    533.0   ±15.0
+zone_gate_cars_accept_bs0          428.7    15.3    405.0    448.0   ±12.3
+zone_gate_cars_accept_bs5           28.5     5.7     18.0     34.0   ±4.5
+zone_open5_share                     0.4     0.0      0.3      0.4   ±0.0
+zone_open6_share                     0.0     0.0      0.0      0.1   ±0.0
+zone_open7_share                     0.0     0.0      0.0      0.0   ±0.0
+zone_open8_share                     0.6     0.0      0.5      0.6   ±0.0
+zone_early_spot1                    48.7     4.5     42.0     54.0   ±3.6
+zone_early_spot2                    50.0     4.1     45.0     57.0   ±3.3
+zone_early_spot3                    48.7     2.3     46.0     52.0   ±1.9
+zone_early_spot4                    49.0     2.6     45.0     52.0   ±2.1
+zone_early_spot5                    53.2     4.5     48.0     58.0   ±3.6
+zone_early_spot6                    42.8     5.4     35.0     50.0   ±4.3
+zone_early_spot7                    45.5     3.6     42.0     51.0   ±2.9
+zone_early_spot8                    69.3     5.4     63.0     76.0   ±4.3
+zone_draws                         407.2    10.2    396.0    426.0   ±8.2
+zone_early_total                   407.2    10.2    396.0    426.0   ±8.2
+zone_gap_dropoffs                  136.8    12.3    121.0    154.0   ±9.8
+zone_p_back_mean                     1.0     0.0      1.0      1.0   ±0.0
+zone_queue_longer_than_zone_share       0.5     0.0      0.5      0.6   ±0.0
+opt_bs0_first                       27.0     8.1     16.0     37.0   ±6.5
+conflicts_rear_end_TTC<1.5s       1183.8    39.4   1130.0   1235.0   ±31.6
+conflicts_merge_TTC<1.5s             0.0     0.0      0.0      0.0   ±0.0
+conflicts_crossing_TTC<1.5s          0.0     0.0      0.0      0.0   ±0.0
+conflicts_junction_TTC<1.5s          0.0     0.0      0.0      0.0   ±0.0

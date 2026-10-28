@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Swap driveway sides: IN on the east side, OUT on the west side (1.6 m off the driveway centre line) -->
+<edges>
+    <edge id="P1_IN"  spreadType="center" shape="327.97,189.87 335.88,208.68"/>
+    <edge id="P1_OUT" spreadType="center" shape="332.92,209.92 325.01,191.11"/>
+    <edge id="P2_IN"  spreadType="center" shape="438.06,169.42 444.45,194.00"/>
+    <edge id="P2_OUT" spreadType="center" shape="441.35,194.80 434.96,170.22"/>
+</edges>
