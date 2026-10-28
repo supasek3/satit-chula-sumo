@@ -54,7 +54,7 @@
     <trip id="SRC_SIDE_R_0_0" type="car" depart="116.29" from="31973404#0" to="31973416#1.32" departLane="2"><param key="source" value="SRC_SIDE_R"/>
     </trip>
     <trip id="main_0_29" type="car" depart="121.81" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="16.2" parking="false"/>
+        <stop busStop="bs_2" duration="47.1" parking="false"/>
     </trip>
     <person id="PED_MAIN_0_9" depart="132.14" type="student">
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
@@ -70,7 +70,7 @@
     <trip id="SRC_SIDE_L_0_0" type="car" depart="184.31" from="31973404#0" to="31973416#1.32" departLane="1"><param key="source" value="SRC_SIDE_L"/>
     </trip>
     <trip id="main_0_17" type="car" depart="185.19" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="29.5" parking="false"/>
+        <stop busStop="bs_2" duration="63.0" parking="false"/>
     </trip>
     <trip id="main_0_26" type="car" depart="191.67" from="31993796#3_E" to="31993793" departLane="1"><param key="source" value="SRC_MAIN_L"/>
         <stop busStop="bs_1" duration="37.5" parking="false"/>
@@ -178,7 +178,7 @@
         <walk from="walk_J1_W" to="31973416#1" arrivalPos="27.0"/>
     </person>
     <trip id="main_0_9" type="car" depart="518.26" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_SRC_SIDE_R"/>
-        <stop busStop="bs_1" duration="39.1" parking="false"/>
+        <stop busStop="bs_2" duration="43.8" parking="false"/>
     </trip>
     <trip id="main_0_43" type="car" depart="536.91" from="31993796#3_E" to="31993793" departLane="2"><param key="source" value="SRC_MAIN_R"/>
     </trip>
@@ -212,7 +212,7 @@
         <stop busStop="bs_1" duration="10.3" parking="false"/>
     </trip>
     <trip id="main_0_35" type="car" depart="744.99" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_SRC_SIDE_L"/>
-        <stop busStop="bs_1" duration="41.4" parking="false"/>
+        <stop busStop="bs_2" duration="67.2" parking="false"/>
     </trip>
     <trip id="main_0_31" type="car" depart="745.66" from="31993796#3_E" to="31993793" departLane="1"><param key="source" value="MOVED_SRC_SIDE_R"/>
         <stop busStop="bs_1" duration="38.3" parking="false"/>
@@ -268,7 +268,7 @@
         <walk from="walk_J1_W" to="31973416#1" arrivalPos="27.0"/>
     </person>
     <trip id="main_1_49" type="car" depart="913.00" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="33.7" parking="false"/>
+        <stop busStop="bs_2" duration="14.0" parking="false"/>
     </trip>
     <person id="PED_MAIN_1_16" depart="914.02" type="student">
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
@@ -405,7 +405,7 @@
         <stop busStop="bs_1" duration="40.3" parking="false"/>
     </trip>
     <trip id="main_1_42" type="car" depart="1132.09" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_SRC_SIDE_R"/>
-        <stop busStop="bs_1" duration="16.5" parking="false"/>
+        <stop busStop="bs_2" duration="20.8" parking="false"/>
     </trip>
     <trip id="main_1_54" type="car" depart="1133.86" from="31993796#3_E" to="31993793" departLane="1"><param key="source" value="SRC_MAIN_L"/>
         <stop busStop="bs_1" duration="21.8" parking="false"/>
@@ -435,7 +435,7 @@
         <stop busStop="bs_1" duration="34.1" parking="false"/>
     </trip>
     <trip id="main_1_14" type="car" depart="1173.30" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="22.4" parking="false"/>
+        <stop busStop="bs_2" duration="33.1" parking="false"/>
     </trip>
     <person id="PED_SECOND_1_18" depart="1173.79" type="student">
         <walk from="walk_J1_W" to="31973416#1" arrivalPos="27.0"/>
@@ -453,7 +453,7 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_1_67" type="car" depart="1192.87" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="54.6" parking="false"/>
+        <stop busStop="bs_2" duration="43.0" parking="false"/>
     </trip>
     <person id="PED_SECOND_1_4" depart="1194.86" type="student">
         <walk from="walk_J1_W" to="31973416#1" arrivalPos="27.0"/>
@@ -545,7 +545,7 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_1_87" type="car" depart="1356.79" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="22.0" parking="false"/>
+        <stop busStop="bs_2" duration="25.5" parking="false"/>
     </trip>
     <person id="PED_SECOND_1_12" depart="1358.18" type="student">
         <walk from="walk_J1_W" to="31973416#1" arrivalPos="27.0"/>
@@ -640,7 +640,7 @@
     <trip id="main_1_7" type="car" depart="1510.69" from="31993796#3_E" to="31993793" departLane="2"><param key="source" value="SRC_MAIN_R"/>
     </trip>
     <trip id="main_1_90" type="car" depart="1513.19" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="20.3" parking="false"/>
+        <stop busStop="bs_2" duration="53.0" parking="false"/>
     </trip>
     <trip id="main_1_36" type="car" depart="1514.97" from="31993796#3_E" to="31993793" departLane="2"><param key="source" value="SRC_MAIN_R"/>
     </trip>
@@ -790,7 +790,7 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_1_50" type="car" depart="1740.04" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="29.5" parking="false"/>
+        <stop busStop="bs_2" duration="18.7" parking="false"/>
     </trip>
     <person id="PED_SECOND_1_14" depart="1740.72" type="student">
         <walk from="walk_J1_W" to="31973416#1" arrivalPos="27.0"/>
@@ -811,7 +811,7 @@
         <stop busStop="bs_1" duration="10.6" parking="false"/>
     </trip>
     <trip id="main_1_9" type="car" depart="1770.75" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="72.0" parking="false"/>
+        <stop busStop="bs_2" duration="40.2" parking="false"/>
     </trip>
     <person id="PED_MAIN_1_34" depart="1773.45" type="student">
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
@@ -847,7 +847,7 @@
         <stop busStop="bs_1" duration="11.9" parking="false"/>
     </trip>
     <trip id="main_2_39" type="car" depart="1819.71" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_P1_OUT"/>
-        <stop busStop="bs_1" duration="38.7" parking="false"/>
+        <stop busStop="bs_2" duration="28.1" parking="false"/>
     </trip>
     <trip id="P1_OUT_2_1" type="car" depart="1824.03" from="P1_OUT" to="31973416#1.32" departLane="best"><param key="source" value="P1_OUT"/>
     </trip>
@@ -899,7 +899,7 @@
     <trip id="main_2_155" type="car" depart="1848.64" from="31993796#3_E" to="31973416#1.32" departLane="2"><param key="source" value="MOVED_SRC_SIDE_L"/>
     </trip>
     <trip id="main_2_151" type="car" depart="1852.92" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="44.7" parking="false"/>
+        <stop busStop="bs_2" duration="34.2" parking="false"/>
     </trip>
     <person id="PED_MAIN_2_45" depart="1853.75" type="student">
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
@@ -914,7 +914,7 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_2_13" type="car" depart="1868.45" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="35.3" parking="false"/>
+        <stop busStop="bs_2" duration="40.1" parking="false"/>
     </trip>
     <trip id="main_2_54" type="car" depart="1869.40" from="31993796#3_E" to="31993793" departLane="2"><param key="source" value="MOVED_SRC_SIDE_L"/>
     </trip>
@@ -993,7 +993,7 @@
         <stop busStop="bs_1" duration="43.5" parking="false"/>
     </trip>
     <trip id="main_2_169" type="car" depart="1950.24" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="18.3" parking="false"/>
+        <stop busStop="bs_2" duration="29.4" parking="false"/>
     </trip>
     <trip id="SRC_SIDE_R_2_3" type="car" depart="1954.95" from="31973404#0" to="31973416#1.32" departLane="2"><param key="source" value="SRC_SIDE_R"/>
     </trip>
@@ -1249,7 +1249,7 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_2_114" type="car" depart="2211.78" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="32.9" parking="false"/>
+        <stop busStop="bs_2" duration="23.6" parking="false"/>
     </trip>
     <trip id="main_2_6" type="car" depart="2212.92" from="31993796#3_E" to="31993793" departLane="2"><param key="source" value="MOVED_SRC_SIDE_R"/>
     </trip>
@@ -1287,7 +1287,7 @@
         <walk from="walk_J1_W" to="31973416#1" arrivalPos="27.0"/>
     </person>
     <trip id="main_2_115" type="car" depart="2228.40" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="72.3" parking="false"/>
+        <stop busStop="bs_2" duration="16.8" parking="false"/>
     </trip>
     <person id="PED_SECOND_2_11" depart="2231.14" type="student">
         <walk from="walk_J1_W" to="31973416#1" arrivalPos="27.0"/>
@@ -1545,7 +1545,7 @@
     <trip id="main_2_125" type="car" depart="2474.86" from="31993796#3_E" to="31993793" departLane="2"><param key="source" value="SRC_MAIN_R"/>
     </trip>
     <trip id="main_2_73" type="car" depart="2475.26" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="26.8" parking="false"/>
+        <stop busStop="bs_2" duration="26.6" parking="false"/>
     </trip>
     <trip id="main_2_81" type="car" depart="2479.14" from="31993796#3_E" to="31973416#1.32" departLane="2"><param key="source" value="SRC_MAIN_R"/>
     </trip>
@@ -1627,7 +1627,7 @@
     <trip id="SRC_SIDE_L_2_1" type="car" depart="2535.72" from="31973404#0" to="31973416#1.32" departLane="1"><param key="source" value="SRC_SIDE_L"/>
     </trip>
     <trip id="main_2_122" type="car" depart="2538.90" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_SRC_SIDE_L"/>
-        <stop busStop="bs_1" duration="48.4" parking="false"/>
+        <stop busStop="bs_2" duration="18.1" parking="false"/>
     </trip>
     <trip id="main_2_42" type="car" depart="2539.69" from="31993796#3_E" to="31993793" departLane="1"><param key="source" value="MOVED_SRC_SIDE_R"/>
         <stop busStop="bs_1" duration="29.6" parking="false"/>
@@ -1669,7 +1669,7 @@
         <stop busStop="bs_1" duration="45.5" parking="false"/>
     </trip>
     <trip id="main_2_20" type="car" depart="2573.35" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="44.5" parking="false"/>
+        <stop busStop="bs_2" duration="17.7" parking="false"/>
     </trip>
     <trip id="main_2_116" type="car" depart="2576.10" from="31993796#3_E" to="31973416#1.32" departLane="2"><param key="source" value="SRC_MAIN_R"/>
     </trip>
@@ -1804,7 +1804,7 @@
     <trip id="main_3_64" type="car" depart="2713.97" from="31993796#3_E" to="31993793" departLane="2"><param key="source" value="SRC_MAIN_R"/>
     </trip>
     <trip id="main_3_165" type="car" depart="2715.20" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="24.6" parking="false"/>
+        <stop busStop="bs_2" duration="18.4" parking="false"/>
     </trip>
     <person id="PED_SECOND_3_5" depart="2717.26" type="student">
         <walk from="walk_J1_W" to="31973416#1" arrivalPos="27.0"/>
@@ -1900,7 +1900,7 @@
         <stop busStop="bs_1" duration="46.4" parking="false"/>
     </trip>
     <trip id="main_3_56" type="car" depart="2766.62" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="43.4" parking="false"/>
+        <stop busStop="bs_2" duration="29.3" parking="false"/>
     </trip>
     <person id="PED_SECOND_3_44" depart="2767.54" type="student">
         <walk from="walk_J1_W" to="31973416#1" arrivalPos="27.0"/>
@@ -1929,7 +1929,7 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_3_79" type="car" depart="2779.66" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_SRC_SIDE_L"/>
-        <stop busStop="bs_1" duration="35.6" parking="false"/>
+        <stop busStop="bs_2" duration="35.7" parking="false"/>
     </trip>
     <trip id="main_3_41" type="car" depart="2785.25" from="31993796#3_E" to="31993793" departLane="1"><param key="source" value="MOVED_SRC_SIDE_R"/>
         <stop busStop="bs_1" duration="15.2" parking="false"/>
@@ -2252,10 +2252,10 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_3_31" type="car" depart="3000.56" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_SRC_SIDE_R"/>
-        <stop busStop="bs_1" duration="32.2" parking="false"/>
+        <stop busStop="bs_2" duration="57.1" parking="false"/>
     </trip>
     <trip id="main_3_60" type="car" depart="3002.85" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="51.6" parking="false"/>
+        <stop busStop="bs_2" duration="47.4" parking="false"/>
     </trip>
     <trip id="main_3_155" type="car" depart="3004.16" from="31993796#3_E" to="31993793" departLane="2"><param key="source" value="SRC_MAIN_R"/>
     </trip>
@@ -3009,7 +3009,7 @@
     <trip id="main_3_25" type="car" depart="3536.76" from="31993796#3_E" to="31993793" departLane="2"><param key="source" value="MOVED_SRC_SIDE_R"/>
     </trip>
     <trip id="main_3_243" type="car" depart="3537.56" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_SRC_SIDE_R"/>
-        <stop busStop="bs_1" duration="46.0" parking="false"/>
+        <stop busStop="bs_2" duration="33.9" parking="false"/>
     </trip>
     <person id="PED_MAIN_3_94" depart="3539.94" type="student">
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
@@ -3028,7 +3028,7 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_3_38" type="car" depart="3549.11" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_SRC_SIDE_L"/>
-        <stop busStop="bs_1" duration="34.4" parking="false"/>
+        <stop busStop="bs_2" duration="36.6" parking="false"/>
     </trip>
     <person id="PED_MAIN_3_27" depart="3556.12" type="student">
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
@@ -3087,7 +3087,7 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_3_203" type="car" depart="3593.91" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_SRC_SIDE_L"/>
-        <stop busStop="bs_1" duration="18.4" parking="false"/>
+        <stop busStop="bs_2" duration="51.8" parking="false"/>
     </trip>
     <person id="PED_SECOND_3_6" depart="3597.71" type="student">
         <walk from="walk_J1_W" to="31973416#1" arrivalPos="27.0"/>
@@ -3298,7 +3298,7 @@
         <stop busStop="bs_1" duration="39.5" parking="false"/>
     </trip>
     <trip id="main_4_92" type="car" depart="3720.94" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_P1_OUT"/>
-        <stop busStop="bs_1" duration="30.6" parking="false"/>
+        <stop busStop="bs_2" duration="15.7" parking="false"/>
     </trip>
     <trip id="main_4_132" type="car" depart="3724.01" from="31993796#3_E" to="31993793" departLane="1"><param key="source" value="SRC_MAIN_L"/>
         <stop busStop="bs_1" duration="46.1" parking="false"/>
@@ -3859,7 +3859,7 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_4_10" type="car" depart="4122.05" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_SRC_SIDE_L"/>
-        <stop busStop="bs_1" duration="40.8" parking="false"/>
+        <stop busStop="bs_2" duration="29.3" parking="false"/>
     </trip>
     <trip id="main_4_87" type="car" depart="4125.02" from="31993796#3_E" to="P1_IN" departLane="2"><param key="source" value="P1_IN"/>
     </trip>
@@ -3922,7 +3922,7 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_4_116" type="car" depart="4161.56" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_SRC_SIDE_R"/>
-        <stop busStop="bs_1" duration="18.1" parking="false"/>
+        <stop busStop="bs_2" duration="7.8" parking="false"/>
     </trip>
     <trip id="main_4_209" type="car" depart="4166.25" from="31993796#3_E" to="31993793" departLane="1"><param key="source" value="MOVED_SRC_SIDE_R"/>
         <stop busStop="bs_1" duration="18.2" parking="false"/>
@@ -3965,7 +3965,7 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_4_168" type="car" depart="4189.32" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="55.2" parking="false"/>
+        <stop busStop="bs_2" duration="15.5" parking="false"/>
     </trip>
     <trip id="main_4_114" type="car" depart="4192.79" from="31993796#3_E" to="31993793" departLane="2"><param key="source" value="MOVED_SRC_SIDE_R"/>
     </trip>
@@ -4038,7 +4038,7 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_4_204" type="car" depart="4252.76" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="50.9" parking="false"/>
+        <stop busStop="bs_2" duration="30.3" parking="false"/>
     </trip>
     <person id="PED_MAIN_4_113" depart="4254.69" type="student">
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
@@ -4560,7 +4560,7 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_5_148" type="car" depart="4572.53" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="16.2" parking="false"/>
+        <stop busStop="bs_2" duration="21.3" parking="false"/>
     </trip>
     <person id="PED_MAIN_5_106" depart="4575.56" type="student">
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
@@ -4828,13 +4828,13 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_5_57" type="car" depart="4718.47" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="11.1" parking="false"/>
+        <stop busStop="bs_2" duration="22.9" parking="false"/>
     </trip>
     <trip id="main_5_167" type="car" depart="4719.65" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
         <stop busStop="bs_1" duration="35.7" parking="false"/>
     </trip>
     <trip id="main_5_199" type="car" depart="4720.32" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="35.3" parking="false"/>
+        <stop busStop="bs_2" duration="21.5" parking="false"/>
     </trip>
     <person id="PED_MAIN_5_35" depart="4720.79" type="student">
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
@@ -4952,7 +4952,7 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_5_65" type="car" depart="4774.81" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="28.0" parking="false"/>
+        <stop busStop="bs_2" duration="24.5" parking="false"/>
     </trip>
     <trip id="main_5_234" type="car" depart="4775.28" from="31993796#3_E" to="31973416#1.32" departLane="2"><param key="source" value="MOVED_SRC_SIDE_R"/>
     </trip>
@@ -5192,7 +5192,7 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_5_174" type="car" depart="4907.27" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_P1_OUT"/>
-        <stop busStop="bs_1" duration="21.7" parking="false"/>
+        <stop busStop="bs_2" duration="47.5" parking="false"/>
     </trip>
     <person id="PED_MAIN_5_83" depart="4907.43" type="student">
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
@@ -5270,7 +5270,7 @@
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
     </person>
     <trip id="main_5_189" type="car" depart="4943.68" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="37.4" parking="false"/>
+        <stop busStop="bs_2" duration="55.8" parking="false"/>
     </trip>
     <trip id="main_5_96" type="car" depart="4946.80" from="31993796#3_E" to="31973416#1.32" departLane="2"><param key="source" value="MOVED_P1_OUT"/>
     </trip>
@@ -5499,7 +5499,7 @@
         <stop busStop="bs_1" duration="19.5" parking="false"/>
     </trip>
     <trip id="main_5_245" type="car" depart="5076.55" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="21.4" parking="false"/>
+        <stop busStop="bs_2" duration="37.0" parking="false"/>
     </trip>
     <person id="PED_SECOND_5_21" depart="5077.09" type="student">
         <walk from="walk_J1_W" to="31973416#1" arrivalPos="27.0"/>
@@ -5798,7 +5798,7 @@
         <stop busStop="bs_1" duration="13.9" parking="false"/>
     </trip>
     <trip id="main_5_56" type="car" depart="5236.10" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_P1_OUT"/>
-        <stop busStop="bs_1" duration="21.7" parking="false"/>
+        <stop busStop="bs_2" duration="71.2" parking="false"/>
     </trip>
     <person id="PED_MAIN_5_64" depart="5236.77" type="student">
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
@@ -5820,7 +5820,7 @@
     <trip id="P1_OUT_5_0" type="car" depart="5241.43" from="P1_OUT" to="31993793" departLane="best"><param key="source" value="P1_OUT"/>
     </trip>
     <trip id="main_5_212" type="car" depart="5242.96" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_SRC_SIDE_L"/>
-        <stop busStop="bs_1" duration="30.8" parking="false"/>
+        <stop busStop="bs_2" duration="51.3" parking="false"/>
     </trip>
     <trip id="main_5_55" type="car" depart="5243.10" from="31993796#3_E" to="31993793" departLane="1"><param key="source" value="MOVED_P1_OUT"/>
         <stop busStop="bs_1" duration="68.6" parking="false"/>
@@ -5898,7 +5898,7 @@
         <stop busStop="bs_2" duration="16.7" parking="false"/>
     </trip>
     <trip id="main_5_21" type="car" depart="5281.95" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_SRC_SIDE_L"/>
-        <stop busStop="bs_1" duration="22.0" parking="false"/>
+        <stop busStop="bs_2" duration="20.8" parking="false"/>
     </trip>
     <person id="PED_SECOND_5_23" depart="5282.22" type="student">
         <walk from="walk_J1_W" to="31973416#1" arrivalPos="27.0"/>
@@ -5942,7 +5942,7 @@
         <stop busStop="bs_1" duration="67.8" parking="false"/>
     </trip>
     <trip id="main_5_46" type="car" depart="5312.38" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="29.9" parking="false"/>
+        <stop busStop="bs_2" duration="21.7" parking="false"/>
     </trip>
     <person id="PED_SECOND_5_2" depart="5312.56" type="student">
         <walk from="walk_J1_W" to="31973416#1" arrivalPos="27.0"/>
@@ -6145,7 +6145,7 @@
         <stop busStop="bs_1" duration="45.1" parking="false"/>
     </trip>
     <trip id="main_6_76" type="car" depart="5459.24" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="50.3" parking="false"/>
+        <stop busStop="bs_2" duration="51.7" parking="false"/>
     </trip>
     <person id="PED_MAIN_6_3" depart="5465.62" type="student">
         <walk from="walk_gate_N" to="31993796#5" arrivalPos="1.0"/>
@@ -6289,7 +6289,7 @@
     <trip id="main_6_77" type="car" depart="5821.29" from="31993796#3_E" to="31993793" departLane="2"><param key="source" value="MOVED_P1_OUT"/>
     </trip>
     <trip id="main_6_32" type="car" depart="5826.94" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="SRC_MAIN_L"/>
-        <stop busStop="bs_1" duration="19.7" parking="false"/>
+        <stop busStop="bs_2" duration="23.1" parking="false"/>
     </trip>
     <trip id="P1_OUT_6_0" type="car" depart="5837.30" from="P1_OUT" to="31973416#1.32" departLane="best"><param key="source" value="P1_OUT"/>
     </trip>
@@ -6326,7 +6326,7 @@
         <stop busStop="bs_5" duration="34.8" parking="false"/>
     </trip>
     <trip id="main_6_19" type="car" depart="5912.30" from="31993796#3_E" to="31973416#1.32" departLane="1"><param key="source" value="MOVED_SRC_SIDE_R"/>
-        <stop busStop="bs_1" duration="74.2" parking="false"/>
+        <stop busStop="bs_2" duration="51.4" parking="false"/>
     </trip>
     <trip id="main_6_31" type="car" depart="5913.00" from="31993796#3_E" to="31993793" departLane="2"><param key="source" value="MOVED_SRC_SIDE_R"/>
     </trip>
