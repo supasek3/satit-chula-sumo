@@ -15,5 +15,5 @@ Run (from this folder):
 mkdir -p output
 OPT_PRESET=best python3 run_seeds.py 10 --out results_best --jobs 3
 ```
-Compare against `../baseline_v7/results/kpi_seeds.csv` (or run `python3 ../compare_v7.py`).
+Compare against `../../1_Baseline/baseline_v7/results/kpi_seeds.csv` (or run `python3 ../compare_v7.py`).
 See `README.md` for every switch and the original v6 screening results.

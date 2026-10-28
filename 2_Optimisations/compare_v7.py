@@ -1,4 +1,4 @@
-"""Compare scenario results against baseline_v7 (same seeds, paired).
+"""Compare scenario results against baseline_v7 (1_Baseline/baseline_v7; same seeds, paired).
 
     python3 compare_v7.py                       # default set of result folders
     python3 compare_v7.py path/to/kpi_seeds.csv ...
@@ -6,7 +6,7 @@
 import csv, math, os, statistics as st, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-BASE = os.path.join(HERE, "baseline_v7/results/kpi_seeds.csv")
+BASE = os.path.join(HERE, "..", "1_Baseline", "baseline_v7", "results", "kpi_seeds.csv")
 DEFAULT = ["scenario_opt_v7/results_best/kpi_seeds.csv", "scenario_z1_dropoff_v7/results/kpi_seeds.csv",
            "scenario_fluke_v7/results/kpi_seeds.csv"]
 KPIS = [("veh_delay_all_s", "Vehicle delay (s)"), ("veh_journey_all_s", "Journey time (s)"),

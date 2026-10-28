@@ -1,18 +1,9 @@
 .DS_Store
 __pycache__/
 *.zip
-baseline_v6/output/*
-!baseline_v6/output/.gitkeep
-baseline_v7/output/*
-!baseline_v7/output/.gitkeep
 # raw per-seed SUMO outputs (hundreds of MB; run_seeds.py regenerates them)
 **/results*/seed_*/
-scenario_opt_v7/output/*
-!scenario_opt_v7/output/.gitkeep
-scenario_z1_dropoff_v7/output/*
-!scenario_z1_dropoff_v7/output/.gitkeep
-scenario_fluke_v7/output/*
-!scenario_fluke_v7/output/.gitkeep
-scenario_combined_v7/output/*
-!scenario_combined_v7/output/.gitkeep
-scenario_combined_v7/results_*.log
+# SUMO GUI/run scratch output and logs (any model folder)
+**/output/*
+!**/output/.gitkeep
+**/results_*.log

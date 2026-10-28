@@ -15,7 +15,7 @@ mkdir -p output
 python3 run_seeds.py 10 --out results
 REDIRECT_LEFT_TURNERS=0.5 python3 run_seeds.py 10 --out results_half    # optional: only half comply
 ```
-Compare against `../baseline_v7/results/kpi_seeds.csv` (or run `python3 ../compare_v7.py`).
+Compare against `../../1_Baseline/baseline_v7/results/kpi_seeds.csv` (or run `python3 ../compare_v7.py`).
 
 ---
 (baseline_v7 README follows)
