@@ -56,7 +56,10 @@ BAR, CURVE, INK, INK2, GRID, SURF = "#86b6ef", "#1c5cab", "#0b0b0b", "#52514e", 
 
 plt.rcParams.update({"font.size": 10, "axes.edgecolor": GRID, "axes.labelcolor": INK2, "xtick.color": INK2,
                      "ytick.color": INK2, "axes.titleweight": "bold", "axes.titlesize": 12})
-fig, axes = plt.subplots(2, 2, figsize=(13, 9), facecolor=SURF)
+fig = plt.figure(figsize=(13, 13.2), facecolor=SURF)
+gs = fig.add_gridspec(3, 2, height_ratios=[1, 1, 0.62], hspace=0.42, wspace=0.18)
+axes = np.array([fig.add_subplot(gs[r, c]) for r in (0, 1) for c in (0, 1)])
+tab_ax = fig.add_subplot(gs[2, :]); tab_ax.axis("off")
 rows = []
 for ax, (key, title, xlabel) in zip(axes.flat, PANELS):
     x = np.array(data[key])
@@ -88,15 +91,39 @@ for ax, (key, title, xlabel) in zip(axes.flat, PANELS):
     note = f"n = {len(x):,}   skew = {skew:+.1f}" + (f"   {zero:.0f}% waited 0 s" if key in ("X1", "X2") else "")
     ax.text(1.0, 1.02, note, transform=ax.transAxes, ha="right", va="bottom", fontsize=9, color=INK2)
     ax.legend(frameon=False, fontsize=9, loc="upper right", labelcolor=INK)
-    rows.append(dict(measure=title, n=len(x), mean_s=round(mu, 1), sd_s=round(sd, 1), median_s=round(med, 1),
-                     p95_s=round(p95, 1), min_s=round(x.min(), 1), max_s=round(x.max(), 1), skew=round(skew, 2),
-                     pct_zero=round(zero, 1)))
+    q25, q75, q90 = np.percentile(x, [25, 75, 90])
+    over = ((60, 120, 300, 600) if key in ("delay", "journey") else (10, 30, 60))
+    rows.append(dict(measure=title, n=len(x), mean_s=round(mu, 1), sd_s=round(sd, 1), min_s=round(x.min(), 1),
+                     p25_s=round(q25, 1), median_s=round(med, 1), p75_s=round(q75, 1), p90_s=round(q90, 1),
+                     p95_s=round(p95, 1), max_s=round(x.max(), 1), skew=round(skew, 2), pct_zero=round(zero, 1),
+                     share_over=", ".join(f"> {t} s: {100 * (x > t).mean():.0f}%" for t in over)))
 
 fig.suptitle(f"{NAME}: distributions 07:00-07:45  ·  {src}", x=0.01, ha="left", fontsize=14, fontweight="bold", color=INK)
 fig.text(0.01, 0.005, "Bars = simulated values. Curve = normal distribution with the same mean and SD; a long right tail "
          "(positive skew) means the bell curve under-states the long waits,\nso use the median and 95th percentile for "
          "those. Values beyond the x-axis are counted in the last bar.", fontsize=8.5, color=INK2)
-fig.tight_layout(rect=(0, 0.04, 1, 0.96))
+# ---- statistics table under the charts
+cols = [("measure", "Measure"), ("n", "n"), ("mean_s", "Mean"), ("sd_s", "SD"), ("min_s", "Min"), ("p25_s", "25%"),
+        ("median_s", "Median"), ("p75_s", "75%"), ("p90_s", "90%"), ("p95_s", "95%"), ("max_s", "Max"), ("skew", "Skew")]
+cells = [[f"{r[k]:,}" if k == "n" else f"{r[k]:+.2f}" if k == "skew" else r[k] if k == "measure" else f"{r[k]:.1f}"
+          for k, _ in cols] for r in rows]
+tb = tab_ax.table(cellText=cells, colLabels=[c for _, c in cols], loc="upper center", cellLoc="right",
+                  colWidths=[0.25] + [0.068] * (len(cols) - 1), bbox=(0, 0.42, 1, 0.58))
+tb.auto_set_font_size(False); tb.set_fontsize(10)
+for (r, c), cell in tb.get_celld().items():
+    cell.set_edgecolor(GRID); cell.set_linewidth(0.8)
+    cell.set_facecolor("#f0efec" if r == 0 else SURF)
+    cell.get_text().set_color(INK if c in (0,) or r == 0 or cols[c][0] in ("median_s", "p95_s") else INK2)
+    if r == 0 or cols[c][0] in ("median_s", "p95_s"):
+        cell.get_text().set_fontweight("bold")
+    if c == 0:
+        cell.get_text().set_ha("left"); cell._loc = "left"
+tab_ax.set_title("Statistics (seconds)", loc="left", color=INK, pad=4)
+tab_ax.text(0, 0.30, "Share above a threshold:   " + "     |     ".join(f"{r['measure']}: {r['share_over']}" for r in rows[:2]),
+            transform=tab_ax.transAxes, fontsize=9.5, color=INK2, va="top")
+tab_ax.text(0, 0.17, "Share above a threshold:   " + "     |     ".join(f"{r['measure']}: {r['share_over']}" for r in rows[2:]),
+            transform=tab_ax.transAxes, fontsize=9.5, color=INK2, va="top")
+fig.subplots_adjust(left=0.06, right=0.98, top=0.93, bottom=0.05)
 png = os.path.join(FOLDER, "distributions_0700_0745.png")
 fig.savefig(png, dpi=150, facecolor=SURF)
 with open(os.path.join(FOLDER, "distribution_stats.csv"), "w", newline="") as f:
