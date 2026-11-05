@@ -20,12 +20,15 @@ import matplotlib.pyplot as plt
 
 ARGS = sys.argv[1:]
 RES = ARGS[ARGS.index("--results") + 1] if "--results" in ARGS else "results"
-pos = [a for i, a in enumerate(ARGS) if not a.startswith("--") and (i == 0 or ARGS[i - 1] != "--results")]
+NSEEDS = int(ARGS[ARGS.index("--seeds") + 1]) if "--seeds" in ARGS else None   # use only seed_1 .. seed_N
+pos = [a for i, a in enumerate(ARGS) if not a.startswith("--") and (i == 0 or ARGS[i - 1] not in ("--results", "--seeds"))]
 HERE = os.path.dirname(os.path.abspath(__file__))
 FOLDER = pos[0] if pos else os.path.join(HERE, "1_Baseline", "baseline_v7")
-NAME = os.path.basename(os.path.normpath(FOLDER)) + ("" if RES == "results" else f" ({RES})")
+NAME = os.path.basename(os.path.abspath(FOLDER)) + ("" if RES == "results" else f" ({RES})")
 
-files = sorted(glob.glob(os.path.join(FOLDER, RES, "seed_*", "tripinfo.xml")))
+files = sorted(glob.glob(os.path.join(FOLDER, RES, "seed_*", "tripinfo.xml")), key=lambda f: int(f.split("seed_")[-1].split(os.sep)[0]))
+if NSEEDS:
+    files = [f for f in files if int(f.split("seed_")[-1].split(os.sep)[0]) <= NSEEDS]
 src = f"{len(files)} seeds ({RES}/)"
 if not files:
     files = [os.path.join(FOLDER, "output", "tripinfo.xml")]
@@ -153,9 +156,10 @@ tab_ax.text(0, 0.30, "Share above a threshold:   " + "     |     ".join(f"{r['me
 tab_ax.text(0, 0.17, "Share above a threshold:   " + "     |     ".join(f"{r['measure']}: {r['share_over']}" for r in rows[2:]),
             transform=tab_ax.transAxes, fontsize=9.5, color=INK2, va="top")
 fig.subplots_adjust(left=0.06, right=0.98, top=0.93, bottom=0.05)
-png = os.path.join(FOLDER, "distributions_0700_0745.png")
+TAG = ("" if RES == "results" else "_" + RES.replace("results_", "")) + (f"_{NSEEDS}seeds" if NSEEDS else "")
+png = os.path.join(FOLDER, f"distributions_0700_0745{TAG}.png")
 fig.savefig(png, dpi=150, facecolor=SURF)
-with open(os.path.join(FOLDER, "distribution_stats.csv"), "w", newline="") as f:
+with open(os.path.join(FOLDER, f"distribution_stats{TAG}.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(rows[0]))
     w.writeheader(); w.writerows(rows)
 for r in rows:
