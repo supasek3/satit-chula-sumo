@@ -35,19 +35,25 @@ if not files:
 
 A = lambda line, k: float(re.search(rf' {k}="([^"]*)"', line).group(1))
 data = {"delay": [], "journey": [], "X1": [], "X2": []}
+per_seed = []                          # one dict like data per seed file
 for f in files:                       # line-by-line: also works on a file still being written by an open GUI
     person = None
+    one = {k: [] for k in data}
     for line in open(f):
         s = line.lstrip()
         if s.startswith("<tripinfo "):
-            data["delay"].append(A(s, "timeLoss") + A(s, "departDelay"))
-            data["journey"].append(A(s, "duration") + A(s, "departDelay"))
+            one["delay"].append(A(s, "timeLoss") + A(s, "departDelay"))
+            one["journey"].append(A(s, "duration") + A(s, "departDelay"))
         elif s.startswith("<personinfo "):
             pid = re.search(r' id="([^"]*)"', s).group(1)
             person = "X1" if pid.startswith("PED_MAIN") else "X2" if pid.startswith("PED_SECOND") else None
         elif s.startswith("<walk ") and person and ' waitingTime="' in s:
-            data[person].append(A(s, "waitingTime"))
+            one[person].append(A(s, "waitingTime"))
+    per_seed.append(one)
+    for k in data:
+        data[k] += one[k]
 
+NS = len(per_seed)
 PANELS = [("delay", "Car delay per car", "seconds lost per car"),
           ("journey", "Car journey time", "seconds from planned departure to arrival"),
           ("X1", "Pedestrian wait at Gate X1", "seconds each student waited"),
@@ -99,16 +105,38 @@ for ax, (key, title, xlabel) in zip(axes.flat, PANELS):
                      share_over=", ".join(f"> {t} s: {100 * (x > t).mean():.0f}%" for t in over)))
 
 fig.suptitle(f"{NAME}: distributions 07:00-07:45  ·  {src}", x=0.01, ha="left", fontsize=14, fontweight="bold", color=INK)
-fig.text(0.01, 0.005, "Bars = simulated values. Curve = normal distribution with the same mean and SD; a long right tail "
+fig.text(0.01, 0.005, ("Bars = all cars / students of all seeds pooled. " if NS > 1 else "Bars = simulated values. ") + "Curve = normal distribution with the same mean and SD; a long right tail "
          "(positive skew) means the bell curve under-states the long waits,\nso use the median and 95th percentile for "
          "those. Values beyond the x-axis are counted in the last bar.", fontsize=8.5, color=INK2)
-# ---- statistics table under the charts
+# ---- statistics table under the charts. Several seeds: every statistic is computed per seed, then averaged over
+# the seeds (that is "the average of the 10 seeds"); +- is the 95% confidence interval of that average.
+T95 = {2: 12.71, 3: 4.30, 4: 3.18, 5: 2.78, 6: 2.57, 7: 2.45, 8: 2.36, 9: 2.31, 10: 2.26}.get(NS, 1.96)
+def seed_stats(x):
+    x = np.array(x)
+    if len(x) == 0:
+        return None
+    q = np.percentile(x, [25, 50, 75, 90, 95])
+    return dict(n=len(x), mean_s=x.mean(), sd_s=x.std(ddof=1) if len(x) > 1 else 0.0, min_s=x.min(), p25_s=q[0],
+                median_s=q[1], p75_s=q[2], p90_s=q[3], p95_s=q[4], max_s=x.max())
+if NS > 1:
+    for r, (key, _, _) in zip(rows, PANELS):
+        st = [d for d in (seed_stats(one[key]) for one in per_seed) if d]
+        r["seeds"] = len(st)
+        for k in ("n", "mean_s", "sd_s", "min_s", "p25_s", "median_s", "p75_s", "p90_s", "p95_s", "max_s"):
+            v = np.array([d[k] for d in st])
+            r[k] = round(float(v.mean()), 1)
+            r[k.replace("_s", "") + "_ci95"] = round(float(T95 * v.std(ddof=1) / math.sqrt(len(v))), 1) if len(v) > 1 else 0.0
 cols = [("measure", "Measure"), ("n", "n"), ("mean_s", "Mean"), ("sd_s", "SD"), ("min_s", "Min"), ("p25_s", "25%"),
         ("median_s", "Median"), ("p75_s", "75%"), ("p90_s", "90%"), ("p95_s", "95%"), ("max_s", "Max"), ("skew", "Skew")]
-cells = [[f"{r[k]:,}" if k == "n" else f"{r[k]:+.2f}" if k == "skew" else r[k] if k == "measure" else f"{r[k]:.1f}"
-          for k, _ in cols] for r in rows]
+def cell(r, k):
+    if k == "measure": return r[k]
+    if k == "skew": return f"{r[k]:+.2f}"
+    if k == "n": return f"{r[k]:,.0f}"
+    ci = r.get(k.replace("_s", "") + "_ci95")
+    return f"{r[k]:.1f} ± {ci:.1f}" if NS > 1 and ci is not None and k in ("mean_s", "median_s", "p95_s") else f"{r[k]:.1f}"
+cells = [[cell(r, k) for k, _ in cols] for r in rows]
 tb = tab_ax.table(cellText=cells, colLabels=[c for _, c in cols], loc="upper center", cellLoc="right",
-                  colWidths=[0.25] + [0.068] * (len(cols) - 1), bbox=(0, 0.42, 1, 0.58))
+                  colWidths=([0.21] + [0.06, 0.09, 0.06, 0.06, 0.06, 0.09, 0.06, 0.06, 0.09, 0.06, 0.06]) if NS > 1 else ([0.25] + [0.068] * (len(cols) - 1)), bbox=(0, 0.42, 1, 0.58))
 tb.auto_set_font_size(False); tb.set_fontsize(10)
 for (r, c), cell in tb.get_celld().items():
     cell.set_edgecolor(GRID); cell.set_linewidth(0.8)
@@ -118,7 +146,8 @@ for (r, c), cell in tb.get_celld().items():
         cell.get_text().set_fontweight("bold")
     if c == 0:
         cell.get_text().set_ha("left"); cell._loc = "left"
-tab_ax.set_title("Statistics (seconds)", loc="left", color=INK, pad=4)
+tab_ax.set_title(f"Statistics (seconds), average of the {NS} seeds (± = 95% confidence interval; n = per seed; "
+                 "skew and threshold shares from all seeds pooled)" if NS > 1 else "Statistics (seconds)", loc="left", color=INK, pad=4)
 tab_ax.text(0, 0.30, "Share above a threshold:   " + "     |     ".join(f"{r['measure']}: {r['share_over']}" for r in rows[:2]),
             transform=tab_ax.transAxes, fontsize=9.5, color=INK2, va="top")
 tab_ax.text(0, 0.17, "Share above a threshold:   " + "     |     ".join(f"{r['measure']}: {r['share_over']}" for r in rows[2:]),
@@ -130,6 +159,6 @@ with open(os.path.join(FOLDER, "distribution_stats.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(rows[0]))
     w.writeheader(); w.writerows(rows)
 for r in rows:
-    print(f"{r['measure']:38s} n={r['n']:5d} mean={r['mean_s']:7.1f} sd={r['sd_s']:7.1f} median={r['median_s']:7.1f} "
+    print(f"{r['measure']:38s} n={r['n']:7.1f} mean={r['mean_s']:7.1f} sd={r['sd_s']:7.1f} median={r['median_s']:7.1f} "
           f"p95={r['p95_s']:7.1f} skew={r['skew']:+.2f}")
 print("saved", png)
