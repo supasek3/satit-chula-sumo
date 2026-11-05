@@ -23,7 +23,11 @@ Old full-morning results were not copied, so nothing here can be mixed up with 0
    `veh_arrived_by_0745` (same in `compare*.py`).
 4. `dynamic_dropoff.py` — drop-off zone statistics collected up to 07:45.
 
-The run still continues after 07:45 until the last car has finished, so every car's delay counts.
+5. **Hard stop at 07:45** (user decision 5 Nov 2026): `baseline.sumocfg` `end` = 4500 and `guard_control.py`
+   `SIM_END` = 4500, so the GUI and the seed runs stop at 07:45. Cars still on the road at 07:45 are kept in the
+   results with their delay up to 07:45 (`tripinfo-output.write-unfinished`). KPIs: `veh_arrived` = cars that
+   finished by 07:45, `veh_counted` = finished + still on the road (all in the delay figures), `veh_unfinished` =
+   cars still on the road or waiting to enter at 07:45. `last_vehicle_done_min_after_0745` is now always about 0.
 
 **Caveat:** the road starts **empty** at 07:00. In the full-morning runs the 06:30–07:00 traffic has already built a
 queue by 07:00, so delays here will be lower than the 07:00–07:45 part of the full run. Compare these folders only

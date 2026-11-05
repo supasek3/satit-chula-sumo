@@ -49,7 +49,7 @@ def run(seed):
     os.makedirs(out, exist_ok=True)
     subprocess.run([sys.executable, "make_baseline.py", str(seed)], check=True, capture_output=True)
     ctl = guard_control.run(["sumo", "-c", "baseline.sumocfg", "--seed", str(seed),
-                    "--tripinfo-output", f"{out}/tripinfo.xml", "--summary-output", f"{out}/summary.xml",
+                    "--tripinfo-output", f"{out}/tripinfo.xml", "--tripinfo-output.write-unfinished", "true", "--summary-output", f"{out}/summary.xml",
                     "--person-summary-output", f"{out}/person_summary.xml", "--stop-output", f"{out}/stops.xml",
                     "--queue-output", f"{out}/queue.xml", "--statistic-output", f"{out}/statistics.xml",
                     "--device.ssm.probability", "1", "--device.ssm.file", f"{out}/ssm.xml",
@@ -71,7 +71,7 @@ def run(seed):
     ti = ET.parse(f"{out}/tripinfo.xml").getroot()
     for t in ti.findall("tripinfo"):   # delay = time lost on the road + time queued before entering the network
         loss[group(t)].append(float(t.get("timeLoss")) + float(t.get("departDelay")))
-        arrived_by_end += float(t.get("arrival")) <= DEMAND_END
+        arrived_by_end += 0 <= float(t.get("arrival")) <= DEMAND_END   # WINDOW: unfinished cars have arrival -1
     for p in ti.findall("personinfo"):
         g = re.sub(r"_\d+_\d+$", "", p.get("id"))
         wait[g] += [float(w.get("waitingTime")) for w in p.findall("walk")]
@@ -97,7 +97,8 @@ def run(seed):
     for g, name in (("PED_MAIN", "X1"), ("PED_SECOND", "X2")):
         k[f"ped_wait_{name}_mean_s"] = statistics.mean(wait[g])
         k[f"ped_wait_{name}_p95_s"] = sorted(wait[g])[int(0.95 * len(wait[g]))]
-    k["veh_arrived"] = len(every)
+    k["veh_arrived"] = arrived_by_end   # WINDOW: cars that finished by 07:45
+    k["veh_counted"] = len(every)       # finished + still on the road at 07:45 (all in the delay KPIs)
     k["veh_arrived_by_0745"] = arrived_by_end
     k["persons_arrived"] = sum(len(v) for v in wait.values())
 

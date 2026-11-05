@@ -36,7 +36,7 @@ YELLOW, ALL_RED = 3.0, 2.0       # s
 VEH_MIN_GREEN = 2.0              # s, low end of the fitted vehicle phase
 PED_MIN_GREEN = 1.0              # s
 APPROACH_M = 30.0                # a moving car this close to the stop line holds pedestrians
-SIM_END = 14400
+SIM_END = 4500   # WINDOW: hard stop at 07:45 (was 14400)
 
 CROSSINGS = {
     "X1": dict(tls="10784747877", crossing=":10784747877_c0", wait_edges={"walk_gate_N", ":10784747877_w0", ":10784747877_w1"}),

@@ -8,13 +8,14 @@
     </input>
     <time>
         <begin value="1800"/>
-        <end value="14400"/>
+        <end value="4500"/>  <!-- WINDOW: hard stop at 07:45 -->
     </time>
     <processing>
         <time-to-teleport value="300"/>
     </processing>
     <output>
         <tripinfo-output value="output/tripinfo.xml"/>
+        <tripinfo-output.write-unfinished value="true"/>  <!-- cars still on the road at 07:45 are counted -->
         <summary-output value="output/summary.xml"/>
         <person-summary-output value="output/person_summary.xml"/>
         <stop-output value="output/stops.xml"/>
