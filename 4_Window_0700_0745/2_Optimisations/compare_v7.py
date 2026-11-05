@@ -14,7 +14,7 @@ KPIS = [("veh_delay_all_s", "Vehicle delay (s)"), ("veh_journey_all_s", "Journey
         ("ped_wait_X1_mean_s", "Gate X1 ped wait, mean (s)"), ("ped_wait_X1_p95_s", "Gate X1 ped wait, p95 (s)"),
         ("ped_wait_X2_mean_s", "Gate X2 ped wait, mean (s)"), ("ped_wait_X2_p95_s", "Gate X2 ped wait, p95 (s)"),
         ("max_queue_outside_entry_veh", "Longest entry queue (cars)"), ("last_vehicle_done_min_after_0745", "Last car after 07:45 (min)"),
-        ("veh_arrived_by_0745", "Cars finished by 07:45"), ("teleports", "Teleports"), ("collisions", "Collisions")]
+        ("veh_arrived_by_0745", "Cars finished by 07:45"), ("veh_unfinished", "Cars still on road at 07:45"), ("teleports", "Teleports"), ("collisions", "Collisions")]
 T9 = 2.262  # t(0.05, 9)
 
 
@@ -31,7 +31,7 @@ SUMMARY = "--summary" in sys.argv
 files = [a for a in sys.argv[1:] if a != "--summary"] or [os.path.join(HERE, f) for f in DEFAULT]
 if SUMMARY:
     cols = [("veh_delay_all_s", "delay s"), ("ped_wait_X1_p95_s", "X1 p95 s"), ("ped_wait_X1_mean_s", "X1 mean s"),
-            ("ped_wait_X2_mean_s", "X2 mean s"), ("ped_wait_X2_p95_s", "X2 p95 s"), ("last_vehicle_done_min_after_0745", "last car min"),
+            ("ped_wait_X2_mean_s", "X2 mean s"), ("ped_wait_X2_p95_s", "X2 p95 s"), ("veh_unfinished", "cars left 07:45"),
             ("collisions", "coll"), ("teleports", "tele")]
     print(f"\n{'run (10 seeds, mean)':44s}" + "".join(f"{n:>13s}" for _, n in cols))
     rows = [("baseline_v7", base)] + [(os.path.relpath(f, HERE).replace("/kpi_seeds.csv", ""), load(f)) for f in files if os.path.exists(f)]
