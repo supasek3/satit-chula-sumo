@@ -24,6 +24,7 @@ OUT = ARGS[ARGS.index("--out") + 1] if "--out" in ARGS else "output"
 N = int(ARGS[0]) if ARGS and ARGS[0].isdigit() else 10
 SEEDS = [int(x) for x in ARGS[ARGS.index("--seeds") + 1].split(",")] if "--seeds" in ARGS else list(range(1, N + 1))
 DEMAND_END = 4500   # WINDOW: 07:45 (was 6000 = 08:10)
+MEASURE_BEGIN = 1800   # WINDOW: only cars/students planned to depart from 07:00 are measured
 QUEUE_LANES = {  # KPI name -> lane id prefix
     "queue_side_road_m": "31973404#0_",
     "queue_main_before_X1_m": "31993796#4_",
@@ -69,6 +70,10 @@ def run(seed):
     loss, wait = defaultdict(list), defaultdict(list)
     arrived_by_end = 0
     ti = ET.parse(f"{out}/tripinfo.xml").getroot()
+    for t in list(ti):   # WINDOW: drop the 06:30-07:00 warm-up traffic (planned departure = depart - departDelay)
+        if (t.tag == "tripinfo" and float(t.get("depart")) - float(t.get("departDelay")) < MEASURE_BEGIN) or \
+                (t.tag == "personinfo" and float(t.get("depart")) < MEASURE_BEGIN):
+            ti.remove(t)
     for t in ti.findall("tripinfo"):   # delay = time lost on the road + time queued before entering the network
         loss[group(t)].append(float(t.get("timeLoss")) + float(t.get("departDelay")))
         arrived_by_end += 0 <= float(t.get("arrival")) <= DEMAND_END   # WINDOW: unfinished cars have arrival -1

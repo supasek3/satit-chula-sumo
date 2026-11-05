@@ -44,3 +44,10 @@ OPT_PRESET=best python3 run_seeds.py 10 --out results_best --jobs 3   # Poom
 ./run_all.sh                                                       # combos A–F (in scenario_combined_v7)
 ```
 Run the baseline first; `compare_v7.py` and `run_all.sh` read `1_Baseline/baseline_v7/results/kpi_seeds.csv`.
+
+6. **Warm-up from 06:30** (user decision 5 Nov 2026, replaces the empty start): `make_baseline.py` writes everything
+   departing before 07:45 (`WINDOW_BEGIN = 0`), `baseline.sumocfg` begins at 0 (06:30), so the queue built 06:30-07:00
+   carries into the window. Results count only cars and students **planned to depart 07:00-07:45**
+   (`MEASURE_BEGIN = 1800` in `run_seeds.py`; same filter in `analyze_all.py` and `plot_distributions.py`).
+   Hard stop at 07:45 unchanged. Run: `./run_5seeds_all.sh` (baseline, Fluke, Poom, Combo B; `ALL=1` adds the Z1
+   versions, which cannot be implemented), then `python3 analyze_all.py --seeds 5`.

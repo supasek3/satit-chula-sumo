@@ -44,12 +44,16 @@ for f in files:                       # line-by-line: also works on a file still
     one = {k: [] for k in data}
     for line in open(f):
         s = line.lstrip()
+        if s.startswith("<tripinfo ") and A(s, "depart") - A(s, "departDelay") < 1800:
+            continue   # 06:30-07:00 warm-up traffic is not measured
         if s.startswith("<tripinfo "):
             one["delay"].append(A(s, "timeLoss") + A(s, "departDelay"))
             one["journey"].append(A(s, "duration") + A(s, "departDelay"))
         elif s.startswith("<personinfo "):
             pid = re.search(r' id="([^"]*)"', s).group(1)
             person = "X1" if pid.startswith("PED_MAIN") else "X2" if pid.startswith("PED_SECOND") else None
+            if A(s, "depart") < 1800:
+                person = None   # warm-up
         elif s.startswith("<walk ") and person and ' waitingTime="' in s:
             one[person].append(A(s, "waitingTime"))
     per_seed.append(one)

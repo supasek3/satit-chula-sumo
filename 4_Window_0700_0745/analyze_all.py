@@ -16,14 +16,15 @@ NS = int(A[A.index("--seeds") + 1]) if "--seeds" in A else 5
 ROOT = A[A.index("--root") + 1] if "--root" in A else HERE
 OUT = A[A.index("--out") + 1] if "--out" in A else HERE
 END = 4500.0
+BEGIN = 1800.0   # measure only cars/students planned to depart 07:00-07:45 (06:30-07:00 = warm-up)
 T95 = {2: 12.71, 3: 4.30, 4: 3.18, 5: 2.78, 6: 2.57, 7: 2.45, 8: 2.36, 9: 2.31, 10: 2.26}
 
 VERSIONS = [  # key, label, folder, results dir, OPT_PRESET
-    ("baseline", "Baseline v7", "1_Baseline/baseline_v7", "results", ""),
-    ("fluke", "Fluke", "2_Optimisations/scenario_fluke_v7", "results_5", ""),
-    ("z1", "Z1 left-turn", "2_Optimisations/scenario_z1_dropoff_v7", "results_5", ""),
-    ("poom", "Poom (best)", "2_Optimisations/scenario_opt_v7", "results_best5", "best"),
-] + [(f"combo_{c}", f"Combo {c}", "2_Optimisations/scenario_combined_v7", f"results_combo_{c}5", f"combo_{c}") for c in "ABCDEF"]
+    ("baseline", "Baseline v7", "1_Baseline/baseline_v7", "results_warm5", ""),
+    ("fluke", "Fluke", "2_Optimisations/scenario_fluke_v7", "results_warm5", ""),
+    ("z1", "Z1 left-turn", "2_Optimisations/scenario_z1_dropoff_v7", "results_warm5", ""),
+    ("poom", "Poom (best)", "2_Optimisations/scenario_opt_v7", "results_best_warm5", "best"),
+] + [(f"combo_{c}", f"Combo {c}", "2_Optimisations/scenario_combined_v7", f"results_combo_{c}_warm5", f"combo_{c}") for c in "ABCDEF"]
 
 GEN = {}  # (folder, preset, seed) -> {trip id: planned depart}
 
@@ -57,16 +58,20 @@ def one_seed(folder, res, preset, seed):
         s = line.lstrip()
         if s.startswith("<tripinfo "):
             seen.add(re.search(r' id="([^"]*)"', s).group(1))
+            if attr(s, "depart") - attr(s, "departDelay") < BEGIN:
+                continue
             delay.append(attr(s, "timeLoss") + attr(s, "departDelay"))
             journey.append(attr(s, "duration") + attr(s, "departDelay"))
             finished += attr(s, "arrival") >= 0
         elif s.startswith("<personinfo "):
             pid = re.search(r' id="([^"]*)"', s).group(1)
             person = "X1" if pid.startswith("PED_MAIN") else "X2" if pid.startswith("PED_SECOND") else None
+            if attr(s, "depart") < BEGIN:
+                person = None
         elif s.startswith("<walk ") and person and ' waitingTime="' in s:
             ped[person].append(attr(s, "waitingTime"))
     plan = planned(folder, preset, seed)
-    not_in = [END - t for i, t in plan.items() if i not in seen and t < END]   # still waiting to enter at 07:45
+    not_in = [END - t for i, t in plan.items() if i not in seen and BEGIN <= t < END]   # still waiting to enter at 07:45
     delay += not_in
     journey += not_in
     stat = open(os.path.join(d, "statistics.xml")).read()

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- WINDOW 07:00-07:45: begin 1800 s (07:00), only demand departing 07:00-07:45. Satit Chula BASELINE (guard-like signal from fitted AnyLogic timings). t=0 is 06:30, demand ends 6000 s (08:10). -->
+<!-- WINDOW 07:00-07:45 with warm-up: simulate 06:30-07:45 (begin 0, end 4500), measure departures 07:00-07:45. Satit Chula BASELINE (guard-like signal from fitted AnyLogic timings). t=0 is 06:30, demand ends 6000 s (08:10). -->
 <configuration>
     <input>
         <net-file value="network_crossings.net.xml"/>
@@ -7,7 +7,7 @@
         <additional-files value="dropoff.add.xml,baseline_tls.add.xml"/>
     </input>
     <time>
-        <begin value="1800"/>
+        <begin value="0"/>
         <end value="4500"/>  <!-- WINDOW: hard stop at 07:45 -->
     </time>
     <processing>

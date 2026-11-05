@@ -158,9 +158,11 @@ for dep, v in veh:
 for dep, x in ped:
     items.append((dep, x.format(d=dep)))
 items.sort(key=lambda a: a[0])
-# ---- WINDOW 07:00-07:45: the full morning is generated exactly as in v7 (same cars, same random draws), then only
-# cars and pedestrians departing in [WINDOW_BEGIN, WINDOW_END) are written. t = 0 is still 06:30.
-WINDOW_BEGIN, WINDOW_END = 1800, 4500           # 07:00, 07:45
+# ---- WINDOW 07:00-07:45 with warm-up (user decision 5 Nov 2026): the full morning is generated exactly as in v7
+# (same cars, same random draws); everything departing before 07:45 is written, so the 06:30-07:00 traffic builds
+# the queue that the 07:00-07:45 cars meet. Results are measured only for departures from MEASURE_BEGIN (07:00).
+WINDOW_BEGIN, WINDOW_END = 0, 4500              # simulate 06:30-07:45
+MEASURE_BEGIN = 1800                            # measure 07:00-07:45 (run_seeds.py, analyze_all.py)
 n_all = len(items)
 items = [it for it in items if WINDOW_BEGIN <= it[0] < WINDOW_END]
 print(f"window 07:00-07:45: kept {len(items)} of {n_all} cars + pedestrians")
