@@ -4,11 +4,13 @@ Separate version created 6 November 2026 from `window-0700-0745` at commit `77c4
 
 ## Open it in SUMO
 
-Double-click **Launch_Combo_B.command** on this Mac, or open a terminal in this folder and run:
+Open a terminal in this folder and run:
 
 ```sh
 python3 run_model.py --method combo_B --seed 1 --gui
 ```
+
+For double-click launching after a GitHub download, first run `chmod +x Launch_Combo_B.command`, then double-click **Launch_Combo_B.command**. Browser uploads do not preserve the executable permission.
 
 Other methods: `--method baseline`, `--method poom`, `--method fluke`. Camera choices: `--camera-delay none` (default), `ethernet`, `wifi`. The baseline always uses the no-camera case. `--drain` follows vehicles already scheduled before 07:45 until completion. Without it the run stops at 07:45, as in the source version. The source uses 0.1-second steps and measures its peak cohort from 07:15 to 07:45; the six bus replacements span the user-confirmed 07:00–07:45 window.
 
