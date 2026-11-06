@@ -1,4 +1,4 @@
-"""Compare all versions, 07:00-07:45, from their seed results (tripinfo.xml + statistics.xml).
+"""Compare all versions, 07:15-07:45 (peak; simulated from 06:30), from their seed results (tripinfo.xml + statistics.xml).
 
     python3 analyze_all.py [--seeds 5] [--root <folder with the results tree>]
 
@@ -16,7 +16,7 @@ NS = int(A[A.index("--seeds") + 1]) if "--seeds" in A else 5
 ROOT = A[A.index("--root") + 1] if "--root" in A else HERE
 OUT = A[A.index("--out") + 1] if "--out" in A else HERE
 END = 4500.0
-BEGIN = 1800.0   # measure only cars/students planned to depart 07:00-07:45 (06:30-07:00 = warm-up)
+BEGIN = 2700.0   # with_delay: measure only cars/students planned to depart 07:15-07:45 (peak); 06:30-07:15 = warm-up
 T95 = {2: 12.71, 3: 4.30, 4: 3.18, 5: 2.78, 6: 2.57, 7: 2.45, 8: 2.36, 9: 2.31, 10: 2.26}
 
 VERSIONS = [  # key, label, folder, results dir, OPT_PRESET   (with_delay: camera delay at X1)

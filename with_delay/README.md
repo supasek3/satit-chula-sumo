@@ -6,7 +6,7 @@ Question: how much does the camera delay hurt the camera-controlled signal at Ga
 Delays (team measurement, camera to screen, 6 Nov 2026): **Ethernet 0.3–0.5 s**, **Wi-Fi 0.6–1.5 s**.
 Object-detection time on the computer is not included yet (`DETECT_DELAY`, default 0).
 
-## Cases (5 seeds each, 07:00–07:45, simulated from 06:30, hard stop 07:45)
+## Cases (5 seeds each, measured 07:15–07:45 = peak, simulated from 06:30, hard stop 07:45)
 
 | Version | No delay | Ethernet | Wi-Fi |
 |---|---|---|---|
@@ -14,7 +14,9 @@ Object-detection time on the computer is not included yet (`DETECT_DELAY`, defau
 | Fluke (Fluke's signal at X1) | ✓ | ✓ | ✓ |
 | Combo B (Poom's rules + Fluke's signal at X1) | ✓ | ✓ | ✓ |
 
-The folders are copies of `4_Window_0700_0745` (06:30 warm-up, measure 07:00–07:45). Changes:
+The folders are copies of `4_Window_0700_0745` (06:30 warm-up). Changes:
+0. **Measured 07:15–07:45 (peak, user decision 6 Nov 2026)**: results count only cars and students planned to depart
+   07:15–07:45 (`MEASURE_BEGIN = 2700` in `run_seeds.py`, `BEGIN` in `analyze_all.py`); 06:30–07:15 builds the queue.
 1. **`camera_delay.py`** (copied into each version folder): the X1 controller sees the crossing as the camera saw it a
    moment ago. Every step the real view of X1 is stored as a frame; the controller gets the frame closest to *d* s old.
    *d* is drawn uniformly from the range and held about 1 s, so the lag drifts within the range; the picture never goes

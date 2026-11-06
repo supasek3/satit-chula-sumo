@@ -172,7 +172,7 @@ class GateZone:
         self.p_back = P_BACK + (P_BACK_LONG - P_BACK) * ramp
         rears = list(rear.values()) + [r for r in map(self.rear_dist, self.dwellers) if r is not None]
         self.tail = max(rears, default=0.0)
-        if 1800 <= now <= 4500:   # WINDOW: measure 07:00-07:45
+        if 2700 <= now <= 4500:   # with_delay: measure 07:15-07:45 (peak)
             self.open_steps[self.n_open] += 1
             self.p_back_sum += self.p_back
             self.long_steps += ramp > 0

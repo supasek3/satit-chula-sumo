@@ -1,5 +1,5 @@
 #!/bin/bash
-# Camera delay at Gate X1, 07:00-07:45 (simulated from 06:30), 0.1 s steps, 5 seeds per case:
+# Camera delay at Gate X1, measured 07:15-07:45 (peak; simulated from 06:30), 0.1 s steps, 5 seeds per case:
 #   baseline (guard, no camera) | Fluke: no delay, Ethernet 0.3-0.5 s, Wi-Fi 0.6-1.5 s | Combo B: the same three
 # Usage:  cd ~/Desktop/SUMO_Project/with_delay && ./run_delay.sh
 # Three streams run side by side. A finished case is skipped, so you can rerun after an interruption.

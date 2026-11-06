@@ -18,7 +18,7 @@ What is delayed: all four inputs of the X1 controller - cars approaching (30 m),
 waiting, students on the crossing (and, for Poom's smart control, the count and longest wait of waiting students).
 
 Safety check: x1_walk_with_car_inside_s counts the seconds in which X1 shows the walk signal while a car is really
-inside the crossing area, the risk a late "crossing clear" picture creates.
+inside the crossing area (07:15-07:45), the risk a late "crossing clear" picture creates.
 """
 import copy
 import os
@@ -29,6 +29,7 @@ MODE = os.environ.get("CAMERA_DELAY", "none")
 RANGES = {"none": None, "ethernet": (0.3, 0.5), "wifi": (0.6, 1.5)}
 DETECT = float(os.environ.get("DETECT_DELAY", "0"))
 HOLD_S = 1.0     # s, how long one lag value lasts before the next is drawn
+MEASURE_FROM = 2700   # s after 06:30: the safety check counts 07:15-07:45 (peak), like the other results
 assert MODE in RANGES, f"CAMERA_DELAY must be one of {list(RANGES)}, got {MODE!r}"
 
 
@@ -69,7 +70,7 @@ class CameraDelay:
 
     def check(self, now, phase, car_really_inside):
         """Accumulate seconds of walk signal at X1 while a car is really inside the crossing."""
-        if self.last is not None and phase == "PED" and car_really_inside:
+        if self.last is not None and now > MEASURE_FROM and phase == "PED" and car_really_inside:
             self.unsafe += now - self.last
         self.last = now
 

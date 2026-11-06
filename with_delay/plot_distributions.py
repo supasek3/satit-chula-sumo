@@ -1,4 +1,4 @@
-"""Histogram + fitted normal ("bell") curve for four baseline measures, 07:00-07:45.
+"""Histogram + fitted normal ("bell") curve for four baseline measures, 07:15-07:45 (peak).
 
     python3 plot_distributions.py                                  # baseline_v7, all seeds in results/
     python3 plot_distributions.py 2_Optimisations/scenario_fluke_v7 # any version folder
@@ -44,15 +44,15 @@ for f in files:                       # line-by-line: also works on a file still
     one = {k: [] for k in data}
     for line in open(f):
         s = line.lstrip()
-        if s.startswith("<tripinfo ") and A(s, "depart") - A(s, "departDelay") < 1800:
-            continue   # 06:30-07:00 warm-up traffic is not measured
+        if s.startswith("<tripinfo ") and A(s, "depart") - A(s, "departDelay") < 2700:
+            continue   # with_delay: 06:30-07:15 warm-up traffic is not measured (peak 07:15-07:45)
         if s.startswith("<tripinfo "):
             one["delay"].append(A(s, "timeLoss") + A(s, "departDelay"))
             one["journey"].append(A(s, "duration") + A(s, "departDelay"))
         elif s.startswith("<personinfo "):
             pid = re.search(r' id="([^"]*)"', s).group(1)
             person = "X1" if pid.startswith("PED_MAIN") else "X2" if pid.startswith("PED_SECOND") else None
-            if A(s, "depart") < 1800:
+            if A(s, "depart") < 2700:
                 person = None   # warm-up
         elif s.startswith("<walk ") and person and ' waitingTime="' in s:
             one[person].append(A(s, "waitingTime"))
@@ -111,7 +111,7 @@ for ax, (key, title, xlabel) in zip(axes.flat, PANELS):
                      p95_s=round(p95, 1), max_s=round(x.max(), 1), skew=round(skew, 2), pct_zero=round(zero, 1),
                      share_over=", ".join(f"> {t} s: {100 * (x > t).mean():.0f}%" for t in over)))
 
-fig.suptitle(f"{NAME}: distributions 07:00-07:45  ·  {src}", x=0.01, ha="left", fontsize=14, fontweight="bold", color=INK)
+fig.suptitle(f"{NAME}: distributions 07:15-07:45 (peak)  ·  {src}", x=0.01, ha="left", fontsize=14, fontweight="bold", color=INK)
 fig.text(0.01, 0.005, ("Bars = all cars / students of all seeds pooled. " if NS > 1 else "Bars = simulated values. ") + "Curve = normal distribution with the same mean and SD; a long right tail "
          "(positive skew) means the bell curve under-states the long waits,\nso use the median and 95th percentile for "
          "those. Values beyond the x-axis are counted in the last bar.", fontsize=8.5, color=INK2)
