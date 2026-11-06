@@ -1,0 +1,65 @@
+{
+  "seed": 1,
+  "bus_count": 6,
+  "bus_replacements": [
+    {
+      "id": "main_2_27",
+      "depart_s": 2032.62,
+      "origin": "31993796#3_E",
+      "destination": "31993793",
+      "lane": "2"
+    },
+    {
+      "id": "main_2_125",
+      "depart_s": 2474.86,
+      "origin": "31993796#3_E",
+      "destination": "31993793",
+      "lane": "2"
+    },
+    {
+      "id": "main_3_199",
+      "depart_s": 2928.99,
+      "origin": "31993796#3_E",
+      "destination": "31993793",
+      "lane": "2"
+    },
+    {
+      "id": "main_3_19",
+      "depart_s": 3381.68,
+      "origin": "31993796#3_E",
+      "destination": "31993793",
+      "lane": "2"
+    },
+    {
+      "id": "main_4_31",
+      "depart_s": 3821.07,
+      "origin": "31993796#3_E",
+      "destination": "31993793",
+      "lane": "2"
+    },
+    {
+      "id": "main_4_148",
+      "depart_s": 4275.42,
+      "origin": "31993796#3_E",
+      "destination": "31993793",
+      "lane": "2"
+    }
+  ],
+  "new_crossing_pedestrians": [],
+  "assumptions": {
+    "bus_count": 6,
+    "bus_window_begin_s": 1800,
+    "bus_window_end_s": 4500,
+    "bus_model": "colour_and_shape_proxy_with_existing_car_physics",
+    "bus_colour": "255,105,180",
+    "bus_gui_shape": "bus",
+    "bus_length_m": 5.0,
+    "bus_min_gap_m": 2.5,
+    "bus_accel_m_s2": 2.6,
+    "bus_decel_m_s2": 4.5,
+    "bus_max_speed_m_s": 13.89,
+    "crossing_width_m": 4.0,
+    "crossing_control": "unsignalized_pedestrian_priority_provisional",
+    "new_crossing_pedestrian_demand": "new_crossing_arrivals.csv; empty until observed"
+  }
+}
