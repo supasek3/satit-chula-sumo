@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-06T10:01:24.412237+07:00 by Eclipse SUMO netconvert 1.28.0
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="/Users/ittipol.f/Documents/Year 4/Image/output/sumo-source-2026-11-06/with_delay/1_Baseline/baseline_v7/network_crossings.net.xml"/>
+    </input>
+
+    <output>
+        <plain-output-prefix value="/Users/ittipol.f/Documents/Year 4/Image/output/sumo-crossings-popbus-2026-11-06/network/original"/>
+        <output.street-names value="true"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.avoid-overlap value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="1"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="1"/>
+    </pedestrian>
+
+</netconvertConfiguration>
+-->
+
+<connections version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/connections_file.xsd">
+    <connection from="1085984275#0" to="31973416#0" fromLane="1" toLane="1"/>
+    <connection from="1085984275#0" to="31973416#0" fromLane="1" toLane="2"/>
+    <connection from="1085984275#0" to="31993793" fromLane="1" toLane="1"/>
+    <connection from="1085984275#0" to="31993793" fromLane="2" toLane="2"/>
+
+    <connection from="31973404#0" to="1085984275#0" fromLane="1" toLane="1"/>
+    <connection from="31973404#0" to="1085984275#0" fromLane="2" toLane="2"/>
+
+    <connection from="31973416#0" to="31973416#1" fromLane="1" toLane="1"/>
+    <connection from="31973416#0" to="31973416#1" fromLane="2" toLane="2"/>
+
+    <connection from="31973416#1" to="31973416#1.32" fromLane="1" toLane="1"/>
+    <connection from="31973416#1" to="31973416#1.32" fromLane="2" toLane="2"/>
+
+    <connection from="31993796#3" to="31993796#4" fromLane="1" toLane="1" keepClear="0"/>
+    <connection from="31993796#3" to="31993796#4" fromLane="2" toLane="2"/>
+    <connection from="31993796#3" to="P1_IN" fromLane="2" toLane="0"/>
+
+    <connection from="31993796#3_E" to="31993796#3_M" fromLane="0" toLane="0"/>
+    <connection from="31993796#3_E" to="31993796#3_M" fromLane="1" toLane="1" keepClear="0"/>
+    <connection from="31993796#3_E" to="31993796#3_M" fromLane="2" toLane="2"/>
+    <connection from="31993796#3_E" to="P2_IN" fromLane="2" toLane="0"/>
+
+    <connection from="31993796#3_M" to="31993796#3" fromLane="0" toLane="0"/>
+    <connection from="31993796#3_M" to="31993796#3" fromLane="1" toLane="1" keepClear="0"/>
+    <connection from="31993796#3_M" to="31993796#3" fromLane="2" toLane="2"/>
+
+    <connection from="31993796#4" to="31993796#5" fromLane="1" toLane="1"/>
+    <connection from="31993796#4" to="31993796#5" fromLane="2" toLane="2"/>
+
+    <connection from="31993796#5" to="1085984275#0" fromLane="1" toLane="1"/>
+    <connection from="31993796#5" to="1085984275#0" fromLane="2" toLane="2"/>
+
+    <connection from="P1_IN"/>
+
+    <connection from="P1_OUT" to="31993796#4" fromLane="0" toLane="2"/>
+
+    <connection from="P2_IN"/>
+
+    <connection from="P2_OUT" to="31993796#3_M" fromLane="0" toLane="2"/>
+
+    <crossing node="10784747877" edges="31993796#5" priority="1" width="4.00" linkIndex="2" outlineShape="240.44,-198.76 241.51,-205.27 245.44,-204.52 244.32,-197.72 243.27,-197.98 242.38,-198.26 241.50,-198.54"/>
+    <crossing node="J1" edges="31973416#1.32" priority="1" width="4.00" linkIndex="2" outlineShape="166.65,-147.28 160.14,-148.35 160.89,-152.28 167.20,-151.25 166.55,-147.30 166.31,-145.82 168.29,-145.50 169.43,-152.39 167.46,-152.71 167.20,-151.25"/>
+</connections>

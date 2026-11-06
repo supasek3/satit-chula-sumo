@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-06T10:01:24.409429+07:00 by Eclipse SUMO netconvert 1.28.0
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="/Users/ittipol.f/Documents/Year 4/Image/output/sumo-source-2026-11-06/with_delay/1_Baseline/baseline_v7/network_crossings.net.xml"/>
+    </input>
+
+    <output>
+        <plain-output-prefix value="/Users/ittipol.f/Documents/Year 4/Image/output/sumo-crossings-popbus-2026-11-06/network/original"/>
+        <output.street-names value="true"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.avoid-overlap value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="1"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="1"/>
+    </pedestrian>
+
+</netconvertConfiguration>
+-->
+
+<nodes version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
+    <location netOffset="-664897.52,-1519094.99" convBoundary="21.43,-21.49,608.73,342.29" origBoundary="100.525079,13.736396,100.529279,13.739480" projParameter="+proj=utm +zone=47 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"/>
+
+    <node id="10072794956" x="288.10" y="197.58" type="priority"/>
+    <node id="10784747877" x="241.36" y="204.59" type="traffic_light" tl="10784747877"/>
+    <node id="2106360898" x="21.43" y="238.60" type="dead_end"/>
+    <node id="280758819" x="228.01" y="342.29" type="dead_end"/>
+    <node id="358217462" x="202.31" y="211.46" type="priority"/>
+    <node id="358227907" x="132.48" y="-21.49" type="dead_end"/>
+    <node id="J1" x="160.24" y="148.34" type="traffic_light" tl="J1"/>
+    <node id="P1_lot" x="296.01" y="216.39" type="dead_end"/>
+    <node id="P1_node" x="326.49" y="190.49" type="priority"/>
+    <node id="P2_lot" x="381.39" y="206.04" type="dead_end"/>
+    <node id="P2_node" x="375.00" y="181.46" type="priority"/>
+    <node id="cluster10784747874_358216946_J0" x="169.00" y="210.22" type="priority"/>
+    <node id="cluster_10068082487_10072794948_10784747883" x="526.36" y="155.07" type="dead_end"/>
+    <node id="cluster_10784747894_9950744948" x="165.81" y="181.80" type="priority"/>
+    <node id="pad_J1_W" x="139.36" y="151.48" type="dead_end"/>
+    <node id="pad_gate_N" x="244.18" y="224.39" type="dead_end"/>
+</nodes>

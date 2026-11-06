@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<nodes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.20" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
+  <location netOffset="-664897.52,-1519094.99" convBoundary="21.43,-21.49,608.73,342.29" origBoundary="100.525079,13.736396,100.529279,13.739480" projParameter="+proj=utm +zone=47 +ellps=WGS84 +datum=WGS84 +units=m +no_defs" />
+  <node id="10072794956" x="288.10" y="197.58" type="priority" />
+  <node id="10784747877" x="241.36" y="204.59" type="traffic_light" tl="10784747877" />
+  <node id="2106360898" x="21.43" y="238.60" type="dead_end" />
+  <node id="280758819" x="228.01" y="342.29" type="dead_end" />
+  <node id="358217462" x="202.31" y="211.46" type="priority" />
+  <node id="358227907" x="132.48" y="-21.49" type="dead_end" />
+  <node id="J1" x="160.24" y="148.34" type="traffic_light" tl="J1" />
+  <node id="P1_lot" x="296.01" y="216.39" type="dead_end" />
+  <node id="P1_node" x="326.49" y="190.49" type="priority" />
+  <node id="P2_lot" x="381.39" y="206.04" type="dead_end" />
+  <node id="P2_node" x="375.00" y="181.46" type="priority" />
+  <node id="cluster10784747874_358216946_J0" x="169.00" y="210.22" type="priority" />
+  <node id="cluster_10068082487_10072794948_10784747883" x="526.36" y="155.07" type="dead_end" />
+  <node id="cluster_10784747894_9950744948" x="165.81" y="181.80" type="priority" />
+  <node id="pad_J1_W" x="139.36" y="151.48" type="dead_end" />
+  <node id="pad_gate_N" x="244.18" y="224.39" type="dead_end" />
+  <node id="X3" x="446.00326015351493" y="168.0206288059235" type="priority" />
+  <node id="X4" x="389.29223040751424" y="178.75479196838904" type="priority" />
+  <node id="pad_X3_N" x="449.35083047233707" y="185.7066055378018" type="dead_end" />
+  <node id="pad_X3_S" x="442.6556898346928" y="150.3346520740452" type="dead_end" />
+  <node id="pad_X4_N" x="392.6398007263364" y="196.44076870026737" type="dead_end" />
+  <node id="pad_X4_S" x="385.9446600886921" y="161.06881523651072" type="dead_end" />
+</nodes>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-06T10:01:24.412879+07:00 by Eclipse SUMO netconvert 1.28.0
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="/Users/ittipol.f/Documents/Year 4/Image/output/sumo-source-2026-11-06/with_delay/1_Baseline/baseline_v7/network_crossings.net.xml"/>
+    </input>
+
+    <output>
+        <plain-output-prefix value="/Users/ittipol.f/Documents/Year 4/Image/output/sumo-crossings-popbus-2026-11-06/network/original"/>
+        <output.street-names value="true"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.avoid-overlap value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="1"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="1"/>
+    </pedestrian>
+
+</netconvertConfiguration>
+-->
+
+<tlLogics version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tllogic_file.xsd">
+    <tlLogic id="10784747877" type="static" programID="0" offset="0">
+        <phase duration="77" state="GGr"/>
+        <phase duration="3"  state="yyr"/>
+        <phase duration="5"  state="rrG"/>
+        <phase duration="5"  state="rrr"/>
+    </tlLogic>
+    <tlLogic id="J1" type="static" programID="0" offset="0">
+        <phase duration="77" state="GGr"/>
+        <phase duration="3"  state="yyr"/>
+        <phase duration="5"  state="rrG"/>
+        <phase duration="5"  state="rrr"/>
+    </tlLogic>
+
+    <connection from="31973416#1" to="31973416#1.32" fromLane="1" toLane="1" tl="J1" linkIndex="0"/>
+    <connection from="31973416#1" to="31973416#1.32" fromLane="2" toLane="2" tl="J1" linkIndex="1"/>
+    <connection from="31993796#4" to="31993796#5" fromLane="1" toLane="1" tl="10784747877" linkIndex="0"/>
+    <connection from="31993796#4" to="31993796#5" fromLane="2" toLane="2" tl="10784747877" linkIndex="1"/>
+</tlLogics>
