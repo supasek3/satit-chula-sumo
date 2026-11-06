@@ -12,7 +12,11 @@ Object-detection time on the computer is not included yet (`DETECT_DELAY`, defau
 |---|---|---|---|
 | Baseline v7 (human guard, no camera) | ✓ | – | – |
 | Fluke (Fluke's signal at X1) | ✓ | ✓ | ✓ |
+| Poom (best: Poom's rules + smart X1 control) | ✓ | ✓ | ✓ |
 | Combo B (Poom's rules + Fluke's signal at X1) | ✓ | ✓ | ✓ |
+
+Poom runs in `scenario_combined_v7` with `OPT_PRESET=best` (same rules as `scenario_opt_v7`). His smart control also
+uses its own car check (can a car actually drive over the crossing?); that check is delayed with the other inputs.
 
 The folders are copies of `4_Window_0700_0745` (06:30 warm-up). Changes:
 0. **Measured 07:15–07:45 (peak, user decision 6 Nov 2026)**: results count only cars and students planned to depart
@@ -31,7 +35,7 @@ The folders are copies of `4_Window_0700_0745` (06:30 warm-up). Changes:
 
 ## Run (on the Mac)
 ```
-cd ~/Desktop/SUMO_Project/with_delay && ./run_delay.sh      # 7 cases × 5 seeds, three streams side by side
+cd ~/Desktop/SUMO_Project/with_delay && ./run_delay.sh      # 10 cases × 5 seeds, four streams side by side
 python3 analyze_all.py --seeds 5                             # -> compare_camera_delay.csv, all_versions.json
 ```
 `run_delay.sh` makes working copies `scenario_fluke_v7_ethernet` and `scenario_fluke_v7_wifi` (Fluke writes its demand

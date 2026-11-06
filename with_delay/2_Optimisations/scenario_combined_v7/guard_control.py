@@ -216,12 +216,13 @@ def run(sumo_cmd, seed, drivers=True, colors=False):
         traci.simulationStep()
         now = traci.simulation.getTime()
         real = sense()
-        near, inside, waiting, on, queue = cam(now, real)   # with_delay: X1 controller sees the camera's (late) view
         HELD.clear()
         HELD.update(zone.held)
+        flows = {g.tls: sense_flow(g.tls) for g in guards if isinstance(g, SmartGuard)}   # Poom's car check
+        near, inside, waiting, on, queue, flows = cam(now, real + (flows,))   # with_delay: X1 sees the camera's (late) view
         for g in guards:
             if isinstance(g, SmartGuard):
-                g.step(now, sense_flow(g.tls), inside[g.tls], waiting[g.crossing], on[g.crossing], *queue[g.crossing])
+                g.step(now, flows[g.tls], inside[g.tls], waiting[g.crossing], on[g.crossing], *queue[g.crossing])
             else:
                 g.step(now, near[g.tls], inside[g.tls], waiting[g.crossing], on[g.crossing])
         cam.check(now, g_x1.phase, real[1][x1["tls"]])   # with_delay: walk shown while a car is really inside X1

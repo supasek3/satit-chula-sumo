@@ -1,8 +1,8 @@
 #!/bin/bash
 # Camera delay at Gate X1, measured 07:15-07:45 (peak; simulated from 06:30), 0.1 s steps, 5 seeds per case:
-#   baseline (guard, no camera) | Fluke: no delay, Ethernet 0.3-0.5 s, Wi-Fi 0.6-1.5 s | Combo B: the same three
-# Usage:  cd ~/Desktop/SUMO_Project/with_delay && ./run_delay.sh
-# Three streams run side by side. A finished case is skipped, so you can rerun after an interruption.
+#   baseline (guard, no camera) | Fluke, Poom (best), Combo B: each with no delay, Ethernet 0.3-0.5 s, Wi-Fi 0.6-1.5 s
+# Usage:  cd ~/Desktop/SUMO_Project/with_delay && ./run_delay.sh      (10 cases)
+# Four streams run side by side. A finished case is skipped, so you can rerun after an interruption.
 # Keep the Mac awake and plugged in. Then:  python3 analyze_all.py --seeds 5
 # Add object-detection time once measured:  DETECT_DELAY=0.1 ./run_delay.sh  (move the old results folders away first)
 cd "$(dirname "$0")"; ROOT="$PWD"
@@ -31,5 +31,7 @@ copy $F ${F}_wifi
   run ${F}_wifi results_wifi wifi "" ) &
 ( for m in none ethernet wifi; do r=$m; [ $m = none ] && r=nodelay
     run 2_Optimisations/scenario_combined_v7 results_combo_B_$r $m combo_B "--jobs 2"; done ) &
+( for m in none ethernet wifi; do r=$m; [ $m = none ] && r=nodelay   # Poom (best) = same folder, preset best
+    run 2_Optimisations/scenario_combined_v7 results_poom_$r $m best "--jobs 2"; done ) &
 wait
 echo "ALL DONE $(date +%H:%M)"

@@ -24,6 +24,9 @@ VERSIONS = [  # key, label, folder, results dir, OPT_PRESET   (with_delay: camer
     ("fluke_none", "Fluke, no delay", "2_Optimisations/scenario_fluke_v7", "results_nodelay", ""),
     ("fluke_eth", "Fluke, Ethernet", "2_Optimisations/scenario_fluke_v7_ethernet", "results_ethernet", ""),
     ("fluke_wifi", "Fluke, Wi-Fi", "2_Optimisations/scenario_fluke_v7_wifi", "results_wifi", ""),
+    ("poom_none", "Poom, no delay", "2_Optimisations/scenario_combined_v7", "results_poom_nodelay", "best"),
+    ("poom_eth", "Poom, Ethernet", "2_Optimisations/scenario_combined_v7", "results_poom_ethernet", "best"),
+    ("poom_wifi", "Poom, Wi-Fi", "2_Optimisations/scenario_combined_v7", "results_poom_wifi", "best"),
     ("b_none", "Combo B, no delay", "2_Optimisations/scenario_combined_v7", "results_combo_B_nodelay", "combo_B"),
     ("b_eth", "Combo B, Ethernet", "2_Optimisations/scenario_combined_v7", "results_combo_B_ethernet", "combo_B"),
     ("b_wifi", "Combo B, Wi-Fi", "2_Optimisations/scenario_combined_v7", "results_combo_B_wifi", "combo_B"),
@@ -128,7 +131,8 @@ for key, r in res.items():
             bm = np.mean([b.get(k, 0.0) for b in base])
             row[k + "_diff"], row[k + "_diff_ci"] = float(np.mean(dif)), ci(dif)
             row[k + "_pct"] = 100 * np.mean(dif) / bm if bm else float("nan")
-        ref = {"fluke_eth": "fluke_none", "fluke_wifi": "fluke_none", "b_eth": "b_none", "b_wifi": "b_none"}.get(key)
+        ref = {"fluke_eth": "fluke_none", "fluke_wifi": "fluke_none", "poom_eth": "poom_none", "poom_wifi": "poom_none",
+               "b_eth": "b_none", "b_wifi": "b_none"}.get(key)
         if ref in res:   # with_delay: the effect of the camera delay = same version, same seeds, without delay
             nd = res[ref]["per_seed"]
             dif = [a.get(k, 0.0) - b.get(k, 0.0) for a, b in zip(r["per_seed"], nd)]
