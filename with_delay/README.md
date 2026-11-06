@@ -88,8 +88,10 @@ cd ~/Desktop/SUMO_Project/with_delay/2_Optimisations/scenario_combined_v7 && mkd
 CAMERA_DELAY=wifi OPT_PRESET=best python3 guard_control.py 1 --gui        # Poom, Wi-Fi
 CAMERA_DELAY=ethernet OPT_PRESET=combo_B python3 guard_control.py 1 --gui # Combo B, Ethernet
 ```
-sumo-gui can take up to a minute to open ("Retrying in 1 seconds" while it starts); do not press Ctrl+C. Set the
-toolbar's Delay to 0 to play fast.
+sumo-gui can take up to a minute to open ("Retrying in 1 seconds" while it starts); do not press Ctrl+C.
+The GUI plays the 06:30–07:00 warm-up at full speed by itself and **pauses at 07:00** (clock 1800), with the queue
+already built. Press play to watch from there; raise the toolbar Delay to slow it down. `GUI_START=2700` pauses at
+07:15 (start of the measured peak) instead, `GUI_START=0` turns the pause off.
 
 ## Results
 

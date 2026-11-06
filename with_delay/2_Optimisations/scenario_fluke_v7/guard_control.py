@@ -162,4 +162,8 @@ if __name__ == "__main__":
     import subprocess
     subprocess.run([sys.executable, "make_baseline.py", str(seed)], check=True)
     binary = "sumo-gui" if "--gui" in sys.argv else "sumo"
-    print(run([binary, "-c", "baseline.sumocfg", "--seed", str(seed)], seed, colors="--gui" in sys.argv))
+    # with_delay: in the GUI the 06:30 warm-up plays at full speed and pauses at GUI_START (default 1800 s = 07:00);
+    # press play to watch from there (raise the toolbar Delay to slow it down). GUI_START=2700 pauses at 07:15.
+    gui_start = os.environ.get("GUI_START", "1800")
+    gui_opts = ["-S", "--delay", "0", "--breakpoints", gui_start] if "--gui" in sys.argv and gui_start != "0" else []
+    print(run([binary, *gui_opts, "-c", "baseline.sumocfg", "--seed", str(seed)], seed, colors="--gui" in sys.argv))
