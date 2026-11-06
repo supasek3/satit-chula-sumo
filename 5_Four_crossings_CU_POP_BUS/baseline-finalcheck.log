@@ -1,0 +1,10 @@
+window 07:00-07:45: kept 1620 of 2342 cars + pedestrians
+seed 2: main scale 0.7747 (raw 764.5 -> target 592.2)
+vehicles by source: {'SRC_MAIN_L': 312, 'MOVED_SRC_SIDE_R': 310, 'SRC_MAIN_R': 270, 'MOVED_SRC_SIDE_L': 150, 'P1_IN': 17, 'P2_IN': 4, 'MOVED_P1_OUT': 80, 'MOVED_P2_OUT': 24, 'P1_OUT': 8, 'P2_OUT': 3, 'SRC_SIDE_L': 18, 'SRC_SIDE_R': 35} total 1231 (no-student cars kept 100%, removed 0)
+drop-offs: {'bs_1': 464, 'bs_2': 105, 'bs_5': 35} | pedestrians: 1111
+CU POP BUS: 6 existing through cars replaced; X3/X4 pedestrians: 0
+Warning! pyarrow is installed with version 23.0.1 which might be incompatible with libsumo which is compiled against libarrow2500.
+ Try to uninstall pyarrow or install a matching pyarrow version, if you encounter problems.
+Outputs: /Users/ittipol.f/Documents/Year 4/Image/output/sumo-crossings-popbus-2026-11-06/runs/baseline_seed2_finalcheck
+Warning: Collision of person 'PED_SECOND_3_10' and person 'PED_SECOND_3_16', lane=':J1_c0_0', time=3266.30.
+Completed: /Users/ittipol.f/Documents/Year 4/Image/output/sumo-crossings-popbus-2026-11-06/runs/baseline_seed2_finalcheck

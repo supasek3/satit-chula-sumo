@@ -1,0 +1,94 @@
+[
+  {
+    "run": "baseline_seed2_finalcheck",
+    "vehicles": {
+      "loaded": "842",
+      "inserted": "842",
+      "running": "0",
+      "waiting": "0"
+    },
+    "safety": {
+      "collisions": "0",
+      "emergencyStops": "0",
+      "emergencyBraking": "0"
+    },
+    "teleports": {
+      "total": "0",
+      "jam": "0",
+      "yield": "0",
+      "wrongLane": "0"
+    },
+    "bus_count": 6,
+    "buses_arrived": 6,
+    "pedestrian_overlap_messages": 1
+  },
+  {
+    "run": "combo_B_seed1_smoke",
+    "vehicles": {
+      "loaded": "843",
+      "inserted": "843",
+      "running": "0",
+      "waiting": "0"
+    },
+    "safety": {
+      "collisions": "0",
+      "emergencyStops": "1",
+      "emergencyBraking": "1"
+    },
+    "teleports": {
+      "total": "0",
+      "jam": "0",
+      "yield": "0",
+      "wrongLane": "0"
+    },
+    "bus_count": 6,
+    "buses_arrived": 6,
+    "pedestrian_overlap_messages": 3
+  },
+  {
+    "run": "combo_B_seed2_finalcheck",
+    "vehicles": {
+      "loaded": "842",
+      "inserted": "842",
+      "running": "0",
+      "waiting": "0"
+    },
+    "safety": {
+      "collisions": "0",
+      "emergencyStops": "0",
+      "emergencyBraking": "0"
+    },
+    "teleports": {
+      "total": "0",
+      "jam": "0",
+      "yield": "0",
+      "wrongLane": "0"
+    },
+    "bus_count": 6,
+    "buses_arrived": 6,
+    "pedestrian_overlap_messages": 5
+  },
+  {
+    "run": "fluke_seed1_finalcheck",
+    "vehicles": {
+      "loaded": "843",
+      "inserted": "843",
+      "running": "0",
+      "waiting": "0"
+    },
+    "safety": {
+      "collisions": "0",
+      "emergencyStops": "0",
+      "emergencyBraking": "1"
+    },
+    "teleports": {
+      "total": "0",
+      "jam": "0",
+      "yield": "0",
+      "wrongLane": "0"
+    },
+    "bus_count": 6,
+    "buses_arrived": 6,
+    "pedestrian_overlap_messages": 8
+  }
+]

@@ -1,0 +1,7 @@
+__pycache__/
+.matplotlib/
+runs/
+*.pyc
+baseline/output/*
+combined/output/*
+fluke/output/*

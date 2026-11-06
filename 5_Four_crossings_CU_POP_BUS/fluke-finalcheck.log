@@ -1,0 +1,18 @@
+window 07:00-07:45: kept 1621 of 2342 cars + pedestrians
+seed 1: main scale 0.7747 (raw 764.5 -> target 592.2)
+vehicles by source: {'MOVED_SRC_SIDE_R': 310, 'SRC_MAIN_L': 310, 'SRC_MAIN_R': 271, 'P1_IN': 16, 'MOVED_SRC_SIDE_L': 150, 'MOVED_P2_OUT': 23, 'MOVED_P1_OUT': 79, 'P2_IN': 5, 'P1_OUT': 9, 'P2_OUT': 4, 'SRC_SIDE_L': 18, 'SRC_SIDE_R': 36} total 1231 (no-student cars kept 100%, removed 0)
+drop-offs: {'bs_1': 443, 'bs_2': 105, 'bs_5': 21} | pedestrians: 1111
+CU POP BUS: 6 existing through cars replaced; X3/X4 pedestrians: 0
+Warning! pyarrow is installed with version 23.0.1 which might be incompatible with libsumo which is compiled against libarrow2500.
+ Try to uninstall pyarrow or install a matching pyarrow version, if you encounter problems.
+Outputs: /Users/ittipol.f/Documents/Year 4/Image/output/sumo-crossings-popbus-2026-11-06/runs/fluke_seed1_finalcheck
+Warning: Vehicle 'main_2_65' performs emergency braking on lane ':10072794956_2_0' with decel=9.00, wished=4.50, severity=1.00, time=2709.40.
+Warning: Collision of person 'PED_MAIN_3_0' and person 'PED_MAIN_3_143', lane=':10784747877_c0_0', time=2802.40.
+Warning: Collision of person 'PED_MAIN_3_0' and person 'PED_MAIN_3_143', lane=':10784747877_c0_0', time=2802.50.
+Warning: Collision of person 'PED_MAIN_3_0' and person 'PED_MAIN_3_143', lane=':10784747877_c0_0', time=2802.60.
+Warning: Collision of person 'PED_MAIN_3_0' and person 'PED_MAIN_3_143', lane=':10784747877_c0_0', time=2802.70.
+Warning: Collision of person 'PED_MAIN_3_0' and person 'PED_MAIN_3_143', lane=':10784747877_c0_0', time=2802.80.
+Warning: Collision of person 'PED_MAIN_3_0' and person 'PED_MAIN_3_143', lane=':10784747877_c0_0', time=2802.90.
+Warning: Collision of person 'PED_MAIN_3_0' and person 'PED_MAIN_3_143', lane=':10784747877_c0_0', time=2803.00.
+Warning: Collision of person 'PED_MAIN_4_122' and person 'PED_MAIN_4_170', lane=':10784747877_c0_0', time=3840.20.
+Completed: /Users/ittipol.f/Documents/Year 4/Image/output/sumo-crossings-popbus-2026-11-06/runs/fluke_seed1_finalcheck

@@ -1,0 +1,14 @@
+test_both_directions_actually_use_new_crossings (__main__.ScenarioTests.test_both_directions_actually_use_new_crossings) ... ok
+test_four_crossings_and_preserved_geometry (__main__.ScenarioTests.test_four_crossings_and_preserved_geometry) ... ok
+test_pink_survives_gui_colour_updates (__main__.ScenarioTests.test_pink_survives_gui_colour_updates) ... ok
+test_six_replacements_preserve_demand (__main__.ScenarioTests.test_six_replacements_preserve_demand) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.133s
+
+OK
+Warning! pyarrow is installed with version 23.0.1 which might be incompatible with libsumo which is compiled against libarrow2500.
+ Try to uninstall pyarrow or install a matching pyarrow version, if you encounter problems.
+CU POP BUS: 6 existing through cars replaced; X3/X4 pedestrians: 0
+CU POP BUS: 6 existing through cars replaced; X3/X4 pedestrians: 0
+CU POP BUS: 6 existing through cars replaced; X3/X4 pedestrians: 0

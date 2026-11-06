@@ -1,0 +1,10 @@
+Success.
+Warning: Edge '1085984275#0' already has a dedicated lane for pedestrians. Not adding another one.
+Warning: Edge '31973404#0' already has a dedicated lane for pedestrians. Not adding another one.
+Warning: Edge '31973416#0' already has a dedicated lane for pedestrians. Not adding another one.
+Warning: Edge '31973416#1' already has a dedicated lane for pedestrians. Not adding another one.
+Warning: Edge '31973416#1.32' already has a dedicated lane for pedestrians. Not adding another one.
+Warning: 13 total messages of type: Edge '%' already has a dedicated lane for %s. Not adding another one.
+Success.
+Warning! pyarrow is installed with version 23.0.1 which might be incompatible with libsumo which is compiled against libarrow2500.
+ Try to uninstall pyarrow or install a matching pyarrow version, if you encounter problems.
