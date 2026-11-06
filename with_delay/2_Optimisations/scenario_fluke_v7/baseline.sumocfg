@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- WINDOW 07:00-07:45 with warm-up: simulate 06:30-07:45 (begin 0, end 4500), measure departures 07:00-07:45. Satit Chula BASELINE (guard-like signal from fitted AnyLogic timings). t=0 is 06:30, demand ends 6000 s (08:10). -->
+<configuration>
+    <input>
+        <net-file value="network_crossings.net.xml"/>
+        <route-files value="baseline.rou.xml"/>
+        <additional-files value="dropoff.add.xml,baseline_tls.add.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="4500"/>  <!-- WINDOW: hard stop at 07:45 -->
+        <step-length value="0.1"/>  <!-- with_delay: 0.1 s steps so 0.3-1.5 s camera delays show -->
+    </time>
+    <processing>
+        <time-to-teleport value="300"/>
+    </processing>
+    <output>
+        <tripinfo-output value="output/tripinfo.xml"/>
+        <tripinfo-output.write-unfinished value="true"/>  <!-- cars still on the road at 07:45 are counted -->
+        <summary-output value="output/summary.xml"/>
+        <person-summary-output value="output/person_summary.xml"/>
+        <stop-output value="output/stops.xml"/>
+        <queue-output value="output/queue.xml"/>
+        <queue-output.period value="1"/>
+        <summary-output.period value="1"/>
+        <statistic-output value="output/statistics.xml"/>
+    </output>
+    <gui_only>
+        <gui-settings-file value="baseline.gui.xml"/>
+    </gui_only>
+    <report>
+        <no-step-log value="true"/>
+    </report>
+    <random_number>
+        <seed value="1"/>
+    </random_number>
+</configuration>
